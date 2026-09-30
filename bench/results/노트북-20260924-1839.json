@@ -1,0 +1,351 @@
+{
+ "host": "노트북",
+ "platform": "Linux-7.2.3-arch1-3-x86_64-with-glibc2.44",
+ "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+ "n": 20,
+ "sec_per_doc": 11.5165,
+ "tg_per_s": 22.196971741203022,
+ "pp_per_s": 37.278447266749204,
+ "field_acc_raw": "103/140 (74%)",
+ "field_acc": "140/140 (100%)",
+ "date": "2026-09-24T18:39",
+ "rows": [
+  {
+   "id": "M01",
+   "seconds": 13.07,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M02",
+   "seconds": 11.94,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M03",
+   "seconds": 12.06,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M04",
+   "seconds": 12.67,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M05",
+   "seconds": 12.41,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M06",
+   "seconds": 10.69,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M07",
+   "seconds": 13.77,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M08",
+   "seconds": 9.32,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M09",
+   "seconds": 10.99,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M10",
+   "seconds": 10.77,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M11",
+   "seconds": 10.38,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M12",
+   "seconds": 11.91,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M13",
+   "seconds": 10.75,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M14",
+   "seconds": 9.57,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M15",
+   "seconds": 10.05,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M16",
+   "seconds": 10.36,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M17",
+   "seconds": 10.75,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M18",
+   "seconds": 12.48,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M19",
+   "seconds": 14.75,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 4,
+    "wrong": [
+     "vendor_type",
+     "has_alcohol",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M20",
+   "seconds": 11.64,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 4,
+    "wrong": [
+     "vendor_type",
+     "has_alcohol",
+     "attendees"
+    ]
+   }
+  }
+ ]
+}

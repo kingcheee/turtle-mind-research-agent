@@ -1,0 +1,53 @@
+{% extends "base.html" %}{% block title %}새 증빙 · 연구비 판정관{% endblock %}{% block main %}
+<section class="scr" data-screen="new">
+  <div class="bar">
+    <div class="steps"><span class="step cur"><i>1</i>올리기</span><span class="step-l"></span><span class="step"><i>2</i>확인</span><span class="step-l"></span><span class="step"><i>3</i>판정</span></div>
+    <span class="sep"></span>
+    <span class="mut">사진 여러 장 + 텍스트를 한 건으로</span>
+    <span class="grow"></span>
+    <span class="mut">필드 추출 · <span class="mono">Qwen2.5-1.5B</span> · 판정은 규칙엔진</span>
+  </div>
+  <form class="up" id="up-form" hx-post="/extract" hx-target="#mn" hx-encoding="multipart/form-data">
+    <div class="split">
+      <div class="fx up-l">
+        <div class="sec">
+          <div class="sec-h"><strong>사진</strong><span>영수증·회의록·출장 문서 — Tesseract OCR</span></div>
+          <div class="up-row">
+            <label class="file"><input type="file" name="files" multiple accept="image/*" id="files"><span class="btn">파일 고르기</span><span class="mut" id="file-n">선택한 파일 없음</span></label>
+            <label class="lbl">문서 종류 <select class="val sel" name="file_doc_type">{% for k in DOC_KINDS %}<option>{{ k }}</option>{% endfor %}</select></label>
+          </div>
+          <input type="hidden" name="demo_photo" id="demo_photo">
+          <div class="demo-ph" id="demo-ph" hidden><img alt="시연 영수증 사진"><span class="mut">시연 영수증 사진 · Gemini 합성</span><button type="button" class="btn sm" id="demo-ph-x">빼기</button></div>
+        </div>
+        <div class="sec grow-sec">
+          <div class="sec-h"><strong>텍스트</strong><span>회의록·출장 문서·영수증 내용 붙여 넣기</span><span class="grow"></span>
+            <label class="lbl">문서 종류 <select class="val sel" name="text_doc_type">{% for k in DOC_KINDS %}<option {{ 'selected' if k=='회의록' }}>{{ k }}</option>{% endfor %}</select></label></div>
+          <textarea name="text_doc" id="text_doc" spellcheck="false" placeholder="2026-06-12 과제 중간점검 회의. 참석: 김철수(한국전자통신연구원), 박민수(KAIST) …"></textarea>
+        </div>
+      </div>
+      <div class="sp sp-x" data-t="next" title="끌어서 크기 조절"></div>
+      <div class="up-r">
+        <div class="sec-h"><strong>시연 케이스</strong><span class="mono">{{ demo|length }}</span><span class="grow"></span><span class="mut">누르면 영수증 사진·텍스트가 채워짐</span></div>
+        <table class="g demo" id="demo">
+          <colgroup><col style="width:44px"><col style="width:78px"><col><col style="width:108px"></colgroup>
+          <thead><tr><th>#</th><th>예상</th><th>사례</th><th>문서</th></tr></thead>
+          <tbody>
+          {% for v, label, kind, text in demo %}<tr class="r" data-kind="{{ kind }}" data-photo="{{ demo_photos.get(loop.index, '') }}" data-text="{{ text }}" tabindex="0">
+            <td class="id">{{ loop.index }}</td>
+            <td><span class="vd {{ v|vc }}"><i class="sh {{ v|vc }}"></i>{{ v }}</span></td>
+            <td class="demo-t">{{ label }}</td>
+            <td class="mut">{{ '사진 + ' if demo_photos.get(loop.index) }}{{ kind }}</td>
+          </tr>{% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="ab">
+      <span class="mut" id="up-sum">문서 없음</span>
+      <span class="grow"></span>
+      <span class="busy">온디바이스 모델이 읽는 중 — 문서당 약 10초</span>
+      <button class="btn pri" type="submit" id="extract-btn">추출 <kbd>⌘↵</kbd></button>
+    </div>
+  </form>
+</section>
+{% endblock %}

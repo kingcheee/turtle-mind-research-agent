@@ -1,0 +1,46 @@
+{% extends "base.html" %}{% block title %}건 목록 · 연구비 판정관{% endblock %}{% block main %}
+<section class="scr" data-screen="list">
+  <div class="bar">
+    <h1>건 목록</h1>
+    <span class="sep"></span>
+    <div class="seg" id="flt" role="group" aria-label="판정 필터">
+      <button type="button" data-v="all" class="on">전체 <span class="n" data-c="all">{{ rows|length }}</span></button>
+      {% for v, c in [('가능','ok'),('보완','warn'),('불가','bad')] %}<button type="button" data-v="{{ c }}"><i class="sh {{ c }}"></i>{{ v }} <span class="n" data-c="{{ c }}">{{ rows|selectattr('verdict','equalto',v)|list|length }}</span></button>{% endfor %}
+    </div>
+    <span class="hint" id="qhint"></span>
+    <span class="grow"></span>
+    <a class="btn pri" href="/new">새 증빙 <kbd>N</kbd></a>
+  </div>
+  <div class="lwrap">
+    <div class="tbl">
+      <table class="g" id="cases">
+        <colgroup><col class="w-id"><col class="w-v"><col class="w-d"><col class="w-cat"><col><col class="w-n"><col class="w-amt"><col class="w-jd"><col class="w-art"><col class="w-nt"></colgroup>
+        <thead><tr><th>ID</th><th>판정</th><th>집행일</th><th>비목</th><th>가맹점·출장지 — 내용</th><th class="ra">인원</th><th class="ca">금액</th><th>판정일</th><th>조문</th><th>고시</th></tr></thead>
+        <tbody id="rows">
+        {% for r in rows %}<tr class="r" data-id="{{ r.id }}" data-v="{{ r.vc }}" data-amt="{{ r.amount or 0 }}" data-href="/case/{{ r.id }}"
+            data-q="#{{ r.id }} {{ r.place or '' }} {{ r.what or '' }} {{ r.rule_ids|join(' ') }} {{ r.articles|join(' ') }} {{ r.category }} {{ r.basis_date or '' }}">
+          <td class="id">#{{ r.id }}</td>
+          <td>{% if r.verdict %}<span class="vd {{ r.vc }}"><i class="sh {{ r.vc }}"></i>{{ r.verdict }}</span>{% else %}<span class="mut">—</span>{% endif %}</td>
+          <td class="mono">{{ r.basis_date or '—' }}</td>
+          <td>{{ r.category }}</td>
+          <td><a class="pl" href="/case/{{ r.id }}">{{ r.place or '—' }}</a>{% if r.what %}<span class="wh"> — {{ r.what }}</span>{% endif %}</td>
+          <td class="ra mono">{{ r.n or '—' }}</td>
+          <td class="ca"><span class="num">{{ r.amount|won }}</span><span class="won">원</span></td>
+          <td class="mono jd">{{ (r.judged_at or '')[5:16]|replace('T',' ') or '—' }}</td>
+          <td>{{ r.articles|join(' · ') }}</td>
+          <td>{{ (r.notice_no or '—')|mono }}</td>
+        </tr>{% endfor %}
+        {% if not rows %}<tr class="empty"><td colspan="10">아직 판정한 건이 없습니다 <a class="btn" href="/new">새 증빙</a></td></tr>{% endif %}
+        <tr class="nomatch" hidden><td colspan="10">맞는 건 없음</td></tr>
+        </tbody>
+        {% if rows %}<tfoot><tr id="foot"><td colspan="6">합계 <span class="mono" id="f-n">{{ rows|length }}건</span>
+          {% for v, c in [('가능','ok'),('보완','warn'),('불가','bad')] %}<span class="sum"><i class="sh {{ c }}"></i>{{ v }} <span class="num" data-sum="{{ c }}">{{ sums[c]|won }}</span><span class="won">원</span></span>{% endfor %}</td>
+          <td class="ca tot"><span class="num" id="f-tot">{{ total|won }}</span><span class="won">원</span></td>
+          <td colspan="3" class="mut">가능 → 사용실적보고서 · 불가 → 자체 회계감사 의견서</td></tr></tfoot>{% endif %}
+      </table>
+    </div>
+    {% if rows %}<div class="sp sp-y" data-t="next" title="끌어서 크기 조절"></div>
+    <div class="pv" id="pv"></div>{% endif %}
+  </div>
+</section>
+{% endblock %}

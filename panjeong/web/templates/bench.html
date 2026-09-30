@@ -1,0 +1,18 @@
+{% extends "base.html" %}{% block title %}실측 · 연구비 판정관{% endblock %}{% block main %}
+<section class="scr" data-screen="bench">
+  <div class="bar">
+    <h1>실측</h1>
+    <span class="sep"></span>
+    <span class="cnts"><span>결과 파일 <span class="mono">{{ results|length }}</span></span></span>
+    <span class="grow"></span>
+    <span class="mut">같은 스크립트 <span class="mono">bench/run_bench.py</span> · 정답지 <span class="mono">data/answer_key.json</span> 20건</span>
+  </div>
+  <div class="fx">
+    <table class="g"><colgroup><col style="width:230px"><col><col style="width:56px"><col style="width:96px"><col style="width:100px"><col style="width:110px"><col style="width:150px"><col style="width:150px"><col style="width:140px"></colgroup>
+      <thead><tr><th>환경</th><th>모델</th><th class="ra">건수</th><th class="ra">문서당 초</th><th class="ra">생성 tok/s</th><th class="ra">프롬프트 tok/s</th><th>필드 · 모델 단독</th><th>필드 · 코드 보정 후</th><th>측정</th></tr></thead>
+      <tbody>{% for r in results %}<tr><td class="strong">{{ r.host }}</td><td class="mono mut">{{ r.model }}</td><td class="ra mono">{{ r.n }}</td><td class="ra mono">{{ '%.1f'|format(r.sec_per_doc) }}</td><td class="ra mono">{{ '%.1f'|format(r.tg_per_s) }}</td><td class="ra mono">{{ '%.0f'|format(r.pp_per_s) }}</td><td class="mono mut">{{ r.field_acc_raw or '—' }}</td><td class="mono strong">{{ r.field_acc }}</td><td class="mono mut">{{ (r.date or '')|replace('T',' ') }}</td></tr>
+      {% else %}<tr class="empty"><td colspan="9">결과 파일 없음 — <span class="mono">bench/results/*.json</span></td></tr>{% endfor %}</tbody></table>
+    <p class="note">필드 = 비목·금액·집행일·업종·주류·인원·참석자(이름+외부 여부). 「코드 보정 후」가 판정에 들어가는 값 — 업종·주류·금액·출장 기간은 문서 텍스트로, 외부 여부는 기관명 대비 소속으로 코드가 확정한다(모델은 추출 한 자리). 합성 텍스트 기준이라 실제 스캔본에서는 낮아질 수 있다.</p>
+  </div>
+</section>
+{% endblock %}

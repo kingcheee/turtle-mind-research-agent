@@ -1,0 +1,26 @@
+{% extends "base.html" %}{% block title %}보고서 · 연구비 판정관{% endblock %}{% block main %}
+<section class="scr" data-screen="reports">
+  <div class="bar">
+    <h1>보고서</h1>
+    <span class="sep"></span>
+    <span class="cnts"><span>집계 대상 <span class="mono">{{ rows|length }}</span></span>{% for v in ['가능','불가'] %}<span><i class="sh {{ v|vc }}"></i> {{ v }} <span class="mono">{{ rows|selectattr('verdict','equalto',v)|list|length }}</span></span>{% endfor %}</span>
+    <span class="grow"></span>
+    <span class="mut">가능 합계 → 사용실적보고서 · 불가 → 자체 회계감사 의견서 · 이의 → 정산 이의신청서</span>
+  </div>
+  <div class="fx">
+    <div class="sec">
+      <div class="sec-h"><strong>공식 서식에 채워 내려받기</strong><span class="mut">국가법령정보센터 별지 (hwp → hwpx) · 「정산보고서」라는 공식 별지는 없음</span></div>
+      <table class="g forms"><colgroup><col style="width:250px"><col style="width:320px"><col><col style="width:108px"></colgroup>
+        <thead><tr><th>서식</th><th>근거</th><th>채우는 곳</th><th></th></tr></thead>
+        <tbody>{% for f in forms %}<tr><td class="strong">{{ f.name }}</td><td class="mut">{{ f.origin }}</td><td class="mut wrap">{{ f.what }}</td><td><a class="btn sm" href="/reports/{{ f.key }}.hwpx">내려받기</a></td></tr>{% endfor %}</tbody></table>
+    </div>
+    <div class="sec">
+      <div class="sec-h"><strong>집계 대상 건</strong><span class="mono">{{ rows|length }}</span><span class="grow"></span><span class="mut">최근 순 · 시행규칙 별지 제7호는 비목별 합산이라 건별 내역은 별첨</span></div>
+      <table class="g"><colgroup><col class="w-id"><col class="w-v"><col class="w-d"><col class="w-cat"><col><col class="w-amt"><col class="w-art"><col style="width:96px"></colgroup>
+        <thead><tr><th>ID</th><th>판정</th><th>집행일</th><th>비목</th><th>가맹점·출장지</th><th class="ra">금액</th><th>조문</th><th>심판</th></tr></thead>
+        <tbody>{% for r in rows %}<tr class="r" data-href="/case/{{ r.id }}"><td class="id"><a href="/case/{{ r.id }}">#{{ r.id }}</a></td><td>{% if r.verdict %}<span class="vd {{ r.vc }}"><i class="sh {{ r.vc }}"></i>{{ r.verdict }}</span>{% endif %}</td><td class="mono">{{ r.basis_date or '—' }}</td><td>{{ r.category }}</td><td>{{ r.place or '—' }}</td><td class="ra"><span class="num">{{ r.amount|won }}</span><span class="won">원</span></td><td>{{ r.articles|join(' · ') }}</td><td>{% if r.queue_status %}<span class="qst {{ r.queue_status }}">{{ r.queue_status }}</span>{% endif %}</td></tr>
+        {% else %}<tr class="empty"><td colspan="8">아직 판정한 건이 없습니다 <a class="btn" href="/new">새 증빙</a></td></tr>{% endfor %}</tbody></table>
+    </div>
+  </div>
+</section>
+{% endblock %}

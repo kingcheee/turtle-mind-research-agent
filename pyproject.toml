@@ -1,0 +1,10 @@
+[project]
+name = "panjeong"
+version = "0.1.0"
+description = "연구비 판정관 — 집행 순간에 영수증을 조문으로 판정하는 온디바이스 연구행정 에이전트 (MVP)"
+requires-python = ">=3.12"
+dependencies = ["fastapi", "uvicorn[standard]", "jinja2", "python-multipart", "httpx", "pytesseract", "pillow", "python-hwpx==2.29.1", "lxml", "pyyaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

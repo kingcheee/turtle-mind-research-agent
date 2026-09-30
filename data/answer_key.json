@@ -1,0 +1,3860 @@
+[
+ {
+  "id": "M01",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 월향\n사업자번호 766-16-19494  중구 세종대로21길 40\n거래일시 2026-06-12 12:41\n품목  수량  금액\n생선구이 정식  4  60,000\n합계 60,000원 (부가세 포함)\n신용카드 승인 81924865  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-06-12(금) 12:41~13:41\n회의장소: 월향 (중구 세종대로21길 40)\n회의목적: 과제 중간점검 결과 협의\n회의내용: 과제 중간점검 결과 협의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원), 정수진(한국전자통신연구원 연구원)\n참석자(외부·과제 미참여): 박민수(KAIST 교수)\n집행금액: 60,000원 (참석 4명, 1인당 15,000원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 60000,
+   "date": "2026-06-12",
+   "time": "12:41",
+   "vendor_name": "월향",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 4,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "박민수",
+     "affiliation": "KAIST 교수",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "과제 중간점검 결과 협의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "외부있음",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2018-05-17 월향 4명 60,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M02",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 광화문몽로\n사업자번호 159-74-38140  중구 세종대로21길\n거래일시 2026-06-15 12:25\n품목  수량  금액\n쌈밥 정식  4  100,000\n합계 100,000원 (부가세 포함)\n신용카드 승인 15032582  연구비카드"
+   },
+   {
+    "kind": "기타",
+    "text": "[영수증 이면 기재] 목적: 규칙엔진 조문 매핑 검토 회의 / 일시: 2026-06-15 12:25 / 장소: 광화문몽로 / 내용: 안건 협의 및 결정 / 참석자: 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원), 정수진(한국전자통신연구원 연구원), 박민수(KAIST 교수)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 100000,
+   "date": "2026-06-15",
+   "time": "12:25",
+   "vendor_name": "광화문몽로",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 4,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "박민수",
+     "affiliation": "KAIST 교수",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "규칙엔진 조문 매핑 검토 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": true,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "간이증빙-10만원이하",
+   "외부있음",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-06-02 광화문몽로 4명 86,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M03",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 탐라마을\n사업자번호 171-40-21889  서대문구 충정로 8\n거래일시 2026-06-16 19:52\n품목  수량  금액\n생선구이 정식  4  100,800\n음료  1  200\n합계 101,000원 (부가세 포함)\n신용카드 승인 83960310  연구비카드"
+   },
+   {
+    "kind": "기타",
+    "text": "[영수증 이면 기재] 목적: 실증 기관 요구사항 청취 회의 / 일시: 2026-06-16 19:52 / 장소: 탐라마을 / 내용: 안건 협의 및 결정 / 참석자: 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원), 정수진(한국전자통신연구원 연구원), 이준호(서울대학교 부교수)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 101000,
+   "date": "2026-06-16",
+   "time": "19:52",
+   "vendor_name": "탐라마을",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 4,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이준호",
+     "affiliation": "서울대학교 부교수",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "실증 기관 요구사항 청취 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": true,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "10만원초과-회의록없음",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-11-21 탐라마을 4명 35,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-25-5-DOC"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M04",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 남산복집\n사업자번호 226-38-92657  중구 무교로32\n거래일시 2026-06-17 13:44\n품목  수량  금액\n쌈밥 정식  3  79,800\n음료  1  200\n합계 80,000원 (부가세 포함)\n신용카드 승인 94212661  연구비카드\n메모: 온디바이스 경량화 모델 성능 검토 회의, 참석 3명: 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원), 김나래(한국과학기술기획평가원 연구위원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 80000,
+   "date": "2026-06-17",
+   "time": "13:44",
+   "vendor_name": "남산복집",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "김나래",
+     "affiliation": "한국과학기술기획평가원 연구위원",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "온디바이스 경량화 모델 성능 검토 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "회의록없음-메모만",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2016-11-15 남산복집 3명 50,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-25-5-DOC"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M05",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 쿠치나후\n사업자번호 699-60-16499  영등로구 의사당대로\n거래일시 2026-06-12 13:05\n품목  수량  금액\n쌈밥 정식  2  37,000\n합계 37,000원 (부가세 포함)\n신용카드 승인 39673100  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-06-12(금) 13:05~14:05\n회의장소: 쿠치나후 (영등로구 의사당대로)\n회의목적: 온디바이스 경량화 모델 성능 검토 회의\n회의내용: 온디바이스 경량화 모델 성능 검토 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 없음\n집행금액: 37,000원 (참석 2명, 1인당 18,500원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 37000,
+   "date": "2026-06-12",
+   "time": "13:05",
+   "vendor_name": "쿠치나후",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 2,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "온디바이스 경량화 모델 성능 검토 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "불가",
+  "tags": [
+   "외부없음-W2",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2016-12-01 쿠치나후 2명 37,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "불가",
+   "rule_ids": [
+    "M-25-4-EXT"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M06",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 세림\n사업자번호 396-63-28907  중구 남대문로길\n거래일시 2026-06-12 20:45\n품목  수량  금액\n갈비탕  3  84,000\n합계 84,000원 (부가세 포함)\n신용카드 승인 82569631  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-06-12(금) 20:45~21:45\n회의장소: 세림 (중구 남대문로길)\n회의목적: 공동연구기관 역할 분담 회의\n회의내용: 공동연구기관 역할 분담 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 최민호(한국전자통신연구원 행정팀)\n집행금액: 84,000원 (참석 3명, 1인당 28,000원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 84000,
+   "date": "2026-06-12",
+   "time": "20:45",
+   "vendor_name": "세림",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "최민호",
+     "affiliation": "한국전자통신연구원 행정팀",
+     "external": false,
+     "participant": false
+    }
+   ],
+   "purpose": "공동연구기관 역할 분담 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "동일기관-미참여자-W2",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2016-10-06 세림 3명 84,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M07",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 흥부골\n사업자번호 673-97-33688  종로구 자하문로\n거래일시 2026-06-12 19:27\n품목  수량  금액\n칼국수  3  63,900\n음료  1  100\n합계 64,000원 (부가세 포함)\n신용카드 승인 23831903  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-06-12(금) 19:27~20:27\n회의장소: 흥부골 (종로구 자하문로)\n회의목적: 시제품 평가 지표 협의\n회의내용: 시제품 평가 지표 협의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원), 정수진(한국전자통신연구원 연구원)\n참석자(외부·과제 미참여): 없음\n집행금액: 64,000원 (참석 3명, 1인당 21,333원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 64000,
+   "date": "2026-06-12",
+   "time": "19:27",
+   "vendor_name": "흥부골",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "시제품 평가 지표 협의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": true,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "연구혁신비-W2",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-11-03 흥부골 3명 64,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "M-25-2-6"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M08",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 쿠치나후\n사업자번호 481-22-81793  영등로구 의사당대로\n거래일시 2026-05-20 13:05\n품목  수량  금액\n비빔밥  2  37,000\n합계 37,000원 (부가세 포함)\n신용카드 승인 18427393  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-05-20(수) 13:05~14:05\n회의장소: 쿠치나후 (영등로구 의사당대로)\n회의목적: 시제품 평가 지표 협의\n회의내용: 시제품 평가 지표 협의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 없음\n집행금액: 37,000원 (참석 2명, 1인당 18,500원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 37000,
+   "date": "2026-05-20",
+   "time": "13:05",
+   "vendor_name": "쿠치나후",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 2,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "시제품 평가 지표 협의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": true,
+   "on_trip": []
+  },
+  "intended": "불가",
+  "tags": [
+   "연구혁신비-시행전",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2016-12-01 쿠치나후 2명 37,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "불가",
+   "rule_ids": [
+    "M-25-4-EXT"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M09",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 롯데쇼핑\n사업자번호 310-73-99181  중구 소공동\n거래일시 2026-06-13 11:53\n품목  수량  금액\n쌈밥 정식  3  55,800\n음료  1  200\n합계 56,000원 (부가세 포함)\n신용카드 승인 81366283  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-06-13(토) 11:53~12:53\n회의장소: 롯데쇼핑 (중구 소공동)\n회의목적: 온디바이스 경량화 모델 성능 검토 회의\n회의내용: 온디바이스 경량화 모델 성능 검토 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 박민수(KAIST 교수)\n집행금액: 56,000원 (참석 3명, 1인당 18,666원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 56000,
+   "date": "2026-06-13",
+   "time": "11:53",
+   "vendor_name": "롯데쇼핑",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "박민수",
+     "affiliation": "KAIST 교수",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "온디바이스 경량화 모델 성능 검토 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "주말",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2018-01-12 롯데쇼핑 3명 56,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-INST-WKD"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M10",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 남산복집\n사업자번호 699-68-57393  중구 무교로32\n거래일시 2026-05-05 13:44\n품목  수량  금액\n냉면  3  49,800\n음료  1  200\n합계 50,000원 (부가세 포함)\n신용카드 승인 50234045  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-05-05(화) 13:44~14:44\n회의장소: 남산복집 (중구 무교로32)\n회의목적: 규칙엔진 조문 매핑 검토 회의\n회의내용: 규칙엔진 조문 매핑 검토 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 장미란(고려대학교 연구교수)\n집행금액: 50,000원 (참석 3명, 1인당 16,666원)"
+   },
+   {
+    "kind": "내부결재문서",
+    "text": "[내부결재문서] 회의비 집행 품의 — 결재 완료 2026-05-03 (회의 시작 전)\n과제번호 2026-DEMO-001 · 회의 일시 2026-05-05 · 목적 규칙엔진 조문 매핑 검토 회의\n외부참석자: 장미란(고려대학교 연구교수) · 사용 예정 금액 50,000원"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 50000,
+   "date": "2026-05-05",
+   "time": "13:44",
+   "vendor_name": "남산복집",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "장미란",
+     "affiliation": "고려대학교 연구교수",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "규칙엔진 조문 매핑 검토 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "W1마지막날-2026-05-05",
+   "공휴일",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2016-11-15 남산복집 3명 50,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-INST-WKD"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": true
+ },
+ {
+  "id": "M11",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 철철\n사업자번호 183-83-49354  중구 을지로길\n거래일시 2026-05-06 12:40\n품목  수량  금액\n비빔밥  3  87,000\n합계 87,000원 (부가세 포함)\n신용카드 승인 80490681  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-05-06(수) 12:40~13:40\n회의장소: 철철 (중구 을지로길)\n회의목적: 과제 중간점검 결과 협의\n회의내용: 과제 중간점검 결과 협의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 정수진(한국전자통신연구원 연구원)\n참석자(외부·과제 미참여): 윤도현(한국연구재단 PM)\n집행금액: 87,000원 (참석 3명, 1인당 29,000원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 87000,
+   "date": "2026-05-06",
+   "time": "12:40",
+   "vendor_name": "철철",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "윤도현",
+     "affiliation": "한국연구재단 PM",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "과제 중간점검 결과 협의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "W2첫날-2026-05-06",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-02-14 철철 3명 87,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M12",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 돈궁\n사업자번호 394-87-19594  중구 다동길 24-3\n거래일시 2025-03-10 10:46\n품목  수량  금액\n냉면  4  78,000\n합계 78,000원 (부가세 포함)\n신용카드 승인 25846520  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2025-03-10(월) 10:46~11:46\n회의장소: 돈궁 (중구 다동길 24-3)\n회의목적: 규칙엔진 조문 매핑 검토 회의\n회의내용: 규칙엔진 조문 매핑 검토 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원), 정수진(한국전자통신연구원 연구원)\n참석자(외부·과제 미참여): 박민수(KAIST 교수)\n집행금액: 78,000원 (참석 4명, 1인당 19,500원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 78000,
+   "date": "2025-03-10",
+   "time": "10:46",
+   "vendor_name": "돈궁",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 4,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "박민수",
+     "affiliation": "KAIST 교수",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "규칙엔진 조문 매핑 검토 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "사전결재없음-W1",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2016-12-10 돈궁 4명 78,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-25-4-PRE"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": true
+ },
+ {
+  "id": "M13",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 하동관\n사업자번호 875-53-29920  중구 명동1가 10-4\n거래일시 2025-03-11 11:44\n품목  수량  금액\n갈비탕  3  45,000\n합계 45,000원 (부가세 포함)\n신용카드 승인 75627516  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2025-03-11(화) 11:44~12:44\n회의장소: 하동관 (중구 명동1가 10-4)\n회의목적: 실증 기관 요구사항 청취 회의\n회의내용: 실증 기관 요구사항 청취 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 이준호(서울대학교 부교수)\n집행금액: 45,000원 (참석 3명, 1인당 15,000원)"
+   },
+   {
+    "kind": "내부결재문서",
+    "text": "[내부결재문서] 회의비 집행 품의 — 결재 완료 2025-03-09 (회의 시작 전)\n과제번호 2026-DEMO-001 · 회의 일시 2025-03-11 · 목적 실증 기관 요구사항 청취 회의\n외부참석자: 이준호(서울대학교 부교수) · 사용 예정 금액 45,000원"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 45000,
+   "date": "2025-03-11",
+   "time": "11:44",
+   "vendor_name": "하동관",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이준호",
+     "affiliation": "서울대학교 부교수",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "실증 기관 요구사항 청취 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "사전결재있음-W1",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2018-01-25 하동관 3명 45,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": true
+ },
+ {
+  "id": "M14",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 더라운지\n사업자번호 882-81-85107  중구 소공로\n거래일시 2025-03-12 16:36\n품목  수량  금액\n돼지국밥  2  39,000\n합계 39,000원 (부가세 포함)\n신용카드 승인 52110478  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2025-03-12(수) 16:36~17:36\n회의장소: 더라운지 (중구 소공로)\n회의목적: 온디바이스 경량화 모델 성능 검토 회의\n회의내용: 온디바이스 경량화 모델 성능 검토 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 없음\n집행금액: 39,000원 (참석 2명, 1인당 19,500원)"
+   },
+   {
+    "kind": "내부결재문서",
+    "text": "[내부결재문서] 회의비 집행 품의 — 결재 완료 2025-03-10 (회의 시작 전)\n과제번호 2026-DEMO-001 · 회의 일시 2025-03-12 · 목적 온디바이스 경량화 모델 성능 검토 회의\n외부참석자: 없음 · 사용 예정 금액 39,000원"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 39000,
+   "date": "2025-03-12",
+   "time": "16:36",
+   "vendor_name": "더라운지",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 2,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "온디바이스 경량화 모델 성능 검토 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": true,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "불가",
+  "tags": [
+   "기본사업-W1불인정",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2016-06-21 더라운지 2명 39,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "불가",
+   "rule_ids": [
+    "M-25-4-EXT"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": true
+ },
+ {
+  "id": "M15",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 이화수\n사업자번호 608-84-69795  서울 중구 남대문로1길\n거래일시 2024-10-15 19:32\n품목  수량  금액\n쌈밥 정식  2  26,000\n합계 26,000원 (부가세 포함)\n신용카드 승인 19229206  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2024-10-15(화) 19:32~20:32\n회의장소: 이화수 (서울 중구 남대문로1길)\n회의목적: 규칙엔진 조문 매핑 검토 회의\n회의내용: 규칙엔진 조문 매핑 검토 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 없음\n집행금액: 26,000원 (참석 2명, 1인당 13,000원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 26000,
+   "date": "2024-10-15",
+   "time": "19:32",
+   "vendor_name": "이화수",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 2,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "규칙엔진 조문 매핑 검토 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": true,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "기본사업-W0",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-10-17 이화수 2명 26,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "구 제25조④(2024-11-30까지)"
+  },
+  "image": true
+ },
+ {
+  "id": "M16",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 혼신마켓　광화문점\n사업자번호 813-95-18519  중구 세종대로\n거래일시 2024-10-16 19:48\n품목  수량  금액\n냉면  2  43,000\n합계 43,000원 (부가세 포함)\n신용카드 승인 18142912  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2024-10-16(수) 19:48~20:48\n회의장소: 혼신마켓　광화문점 (중구 세종대로)\n회의목적: 연차 보고서 작성 방향 회의\n회의내용: 연차 보고서 작성 방향 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 정수진(한국전자통신연구원 연구원)\n참석자(외부·과제 미참여): 없음\n집행금액: 43,000원 (참석 2명, 1인당 21,500원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 43000,
+   "date": "2024-10-16",
+   "time": "19:48",
+   "vendor_name": "혼신마켓　광화문점",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 2,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "연차 보고서 작성 방향 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "불가",
+  "tags": [
+   "외부없음-W0",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2018-01-23 혼신마켓　광화문점 2명 43,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "불가",
+   "rule_ids": [
+    "M-25-4-EXT"
+   ],
+   "notice_no": "구 제25조④(2024-11-30까지)"
+  },
+  "image": true
+ },
+ {
+  "id": "M17",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 서라벌\n사업자번호 797-67-47302  중구 소소문로 101-1\n거래일시 2024-11-30 12:48\n품목  수량  금액\n쌈밥 정식  3  51,000\n합계 51,000원 (부가세 포함)\n신용카드 승인 61780050  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2024-11-30(토) 12:48~13:48\n회의장소: 서라벌 (중구 소소문로 101-1)\n회의목적: 연차 보고서 작성 방향 회의\n회의내용: 연차 보고서 작성 방향 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 박민수(KAIST 교수)\n집행금액: 51,000원 (참석 3명, 1인당 17,000원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 51000,
+   "date": "2024-11-30",
+   "time": "12:48",
+   "vendor_name": "서라벌",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "박민수",
+     "affiliation": "KAIST 교수",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "연차 보고서 작성 방향 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "개정전날-2024-11-30",
+   "주말",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-04-21 서라벌 3명 51,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-INST-WKD"
+   ],
+   "notice_no": "구 제25조④(2024-11-30까지)"
+  },
+  "image": true
+ },
+ {
+  "id": "M18",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 참숯골\n사업자번호 572-55-32026  중구 무교로\n거래일시 2024-12-01 12:52\n품목  수량  금액\n된장찌개  3  33,900\n음료  1  100\n합계 34,000원 (부가세 포함)\n신용카드 승인 91996233  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2024-12-01(일) 12:52~13:52\n회의장소: 참숯골 (중구 무교로)\n회의목적: 규칙엔진 조문 매핑 검토 회의\n회의내용: 규칙엔진 조문 매핑 검토 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 김나래(한국과학기술기획평가원 연구위원)\n집행금액: 34,000원 (참석 3명, 1인당 11,333원)"
+   },
+   {
+    "kind": "내부결재문서",
+    "text": "[내부결재문서] 회의비 집행 품의 — 결재 완료 2024-11-29 (회의 시작 전)\n과제번호 2026-DEMO-001 · 회의 일시 2024-12-01 · 목적 규칙엔진 조문 매핑 검토 회의\n외부참석자: 김나래(한국과학기술기획평가원 연구위원) · 사용 예정 금액 34,000원"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 34000,
+   "date": "2024-12-01",
+   "time": "12:52",
+   "vendor_name": "참숯골",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "김나래",
+     "affiliation": "한국과학기술기획평가원 연구위원",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "규칙엔진 조문 매핑 검토 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "개정일-2024-12-01",
+   "주말",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2018-04-04 참숯골 3명 34,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-INST-WKD"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": true
+ },
+ {
+  "id": "M19",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 흥부골\n사업자번호 323-46-26952  종로구 자하문로\n거래일시 2026-07-02 19:27\n품목  수량  금액\n된장찌개  3  55,800\n소주  2  8,000\n음료  1  200\n합계 64,000원 (부가세 포함)\n신용카드 승인 43234300  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-07-02(목) 19:27~20:27\n회의장소: 흥부골 (종로구 자하문로)\n회의목적: 특허 출원 범위 협의\n회의내용: 특허 출원 범위 협의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 오세훈(㈜퓨처테크 대표)\n집행금액: 64,000원 (참석 3명, 1인당 21,333원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 64000,
+   "date": "2026-07-02",
+   "time": "19:27",
+   "vendor_name": "흥부골",
+   "vendor_type": "식당",
+   "has_alcohol": true,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "오세훈",
+     "affiliation": "㈜퓨처테크 대표",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "특허 출원 범위 협의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "주류",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-11-03 흥부골 3명 64,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-INST-ALC"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M20",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 호프 앤 펍 대전점\n사업자번호 182-31-68875  대전 유성구 대학로 99\n거래일시 2026-07-03 12:02\n품목  수량  금액\n치킨  3  72,000\n생맥주  2  12,000\n합계 84,000원 (부가세 포함)\n신용카드 승인 63907779  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-07-03(금) 12:02~13:02\n회의장소: 호프 앤 펍 대전점 (대전 유성구 대학로 99)\n회의목적: 실증 기관 요구사항 청취 회의\n회의내용: 실증 기관 요구사항 청취 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 정수진(한국전자통신연구원 연구원)\n참석자(외부·과제 미참여): 박민수(KAIST 교수)\n집행금액: 84,000원 (참석 3명, 1인당 28,000원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 84000,
+   "date": "2026-07-03",
+   "time": "12:02",
+   "vendor_name": "호프 앤 펍 대전점",
+   "vendor_type": "주점",
+   "has_alcohol": true,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "박민수",
+     "affiliation": "KAIST 교수",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "실증 기관 요구사항 청취 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "주류",
+   "주점",
+   "감사사례-C-03",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2016-12-02 신의주찹쌀순대 3명 21,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-INST-ALC"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": true
+ },
+ {
+  "id": "M21",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 호텔 인터불고 뷔페\n사업자번호 540-80-46493  대구 수성구 팔공로 212\n거래일시 2026-07-08 12:22\n품목  수량  금액\n갈비탕  3  390,000\n합계 390,000원 (부가세 포함)\n신용카드 승인 65740154  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-07-08(수) 12:22~13:22\n회의장소: 호텔 인터불고 뷔페 (대구 수성구 팔공로 212)\n회의목적: 연차 보고서 작성 방향 회의\n회의내용: 연차 보고서 작성 방향 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 이준호(서울대학교 부교수)\n집행금액: 390,000원 (참석 3명, 1인당 130,000원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 390000,
+   "date": "2026-07-08",
+   "time": "12:22",
+   "vendor_name": "호텔 인터불고 뷔페",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이준호",
+     "affiliation": "서울대학교 부교수",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "연차 보고서 작성 방향 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "1인한도초과",
+   "감사사례-C-01",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-04-03 초류향 3명 54,500원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-INST-CAP"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "M22",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 육대장\n사업자번호 254-20-33097  중구 세종대로20길\n거래일시 2026-06-20 12:16\n품목  수량  금액\n비빔밥  3  48,000\n합계 48,000원 (부가세 포함)\n신용카드 승인 30306925  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-06-20(토) 12:16~13:16\n회의장소: 육대장 (중구 세종대로20길)\n회의목적: 실증 기관 요구사항 청취 회의\n회의내용: 실증 기관 요구사항 청취 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 박민수(KAIST 교수)\n집행금액: 48,000원 (참석 3명, 1인당 16,000원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 48000,
+   "date": "2026-06-20",
+   "time": "12:16",
+   "vendor_name": "육대장",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "박민수",
+     "affiliation": "KAIST 교수",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "실증 기관 요구사항 청취 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": [
+    "김철수"
+   ]
+  },
+  "intended": "불가",
+  "tags": [
+   "출장일중복",
+   "주말",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-08-29 육대장 3명 48,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "불가",
+   "rule_ids": [
+    "M-DUP-TRIP",
+    "M-INST-WKD"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "M23",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 오복미역\n사업자번호 112-72-87217  중구남대문로9길\n거래일시 2026-06-18 12:20\n품목  수량  금액\n비빔밥  3  36,000\n합계 36,000원 (부가세 포함)\n신용카드 승인 34473646  연구비카드"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 36000,
+   "date": "2026-06-18",
+   "time": "12:20",
+   "vendor_name": "오복미역",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [],
+   "purpose": null,
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "불가",
+  "tags": [
+   "근거없는-평일점심",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-05-18 오복미역 3명 48,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "불가",
+   "rule_ids": [
+    "M-25-14-6"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "M24",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 춘산에프앤비\n사업자번호 104-28-64912  중구 태평로\n거래일시 2026-06-18 19:10\n품목  수량  금액\n칼국수  3  54,000\n합계 54,000원 (부가세 포함)\n신용카드 승인 81751584  연구비카드"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 54000,
+   "date": "2026-06-18",
+   "time": "19:10",
+   "vendor_name": "춘산에프앤비",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [],
+   "purpose": null,
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "근거없는-평일저녁",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2016-09-21 춘산에프앤비 3명 75,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-25-5-DOC"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "M25",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 제주성고기마루\n사업자번호 426-26-77566  중구 서소문로\n거래일시 2025-04-02 19:00\n품목  수량  금액\n쌈밥 정식  11  517,000\n합계 517,000원 (부가세 포함)\n신용카드 승인 92891895  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2025-04-02(수) 19:00~20:00\n회의장소: 제주성고기마루 (중구 서소문로)\n회의목적: 시제품 평가 지표 협의\n회의내용: 시제품 평가 지표 협의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원), 정수진(한국전자통신연구원 연구원)\n참석자(외부·과제 미참여): 박민수(KAIST 교수), 이준호(서울대학교 부교수), 김나래(한국과학기술기획평가원 연구위원), 오세훈(㈜퓨처테크 대표), 장미란(고려대학교 연구교수), 윤도현(한국연구재단 PM), 최민호(한국전자통신연구원 행정팀), 한지원(한국전자통신연구원 연구원(타 과제))\n집행금액: 517,000원 (참석 11명, 1인당 47,000원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 517000,
+   "date": "2025-04-02",
+   "time": "19:00",
+   "vendor_name": "제주성고기마루",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 11,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "박민수",
+     "affiliation": "KAIST 교수",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "이준호",
+     "affiliation": "서울대학교 부교수",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "김나래",
+     "affiliation": "한국과학기술기획평가원 연구위원",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "오세훈",
+     "affiliation": "㈜퓨처테크 대표",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "장미란",
+     "affiliation": "고려대학교 연구교수",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "윤도현",
+     "affiliation": "한국연구재단 PM",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "최민호",
+     "affiliation": "한국전자통신연구원 행정팀",
+     "external": false,
+     "participant": false
+    },
+    {
+     "name": "한지원",
+     "affiliation": "한국전자통신연구원 연구원(타 과제)",
+     "external": false,
+     "participant": false
+    }
+   ],
+   "purpose": "시제품 평가 지표 협의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "사전결재없음-W1",
+   "1인한도초과",
+   "감사사례-C-10",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2016-12-29 제주성고기마루 11명 272,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-25-4-PRE",
+    "M-INST-CAP"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": false
+ },
+ {
+  "id": "M26",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 카페 브루잉\n사업자번호 898-97-83304  대전 유성구 가정로 218\n거래일시 2026-07-01 12:59\n품목  수량  금액\n밀크티  3  21,900\n디저트  1  100\n합계 22,000원 (부가세 포함)\n신용카드 승인 62664205  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-07-01(수) 12:59~13:59\n회의장소: 카페 브루잉 (대전 유성구 가정로 218)\n회의목적: 온디바이스 경량화 모델 성능 검토 회의\n회의내용: 온디바이스 경량화 모델 성능 검토 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 이영희(한국전자통신연구원 책임연구원), 정수진(한국전자통신연구원 연구원)\n참석자(외부·과제 미참여): 김나래(한국과학기술기획평가원 연구위원)\n집행금액: 22,000원 (참석 3명, 1인당 7,333원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 22000,
+   "date": "2026-07-01",
+   "time": "12:59",
+   "vendor_name": "카페 브루잉",
+   "vendor_type": "카페",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "김나래",
+     "affiliation": "한국과학기술기획평가원 연구위원",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "온디바이스 경량화 모델 성능 검토 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "카페",
+   "외부있음",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-10-11 손가명가 3명 22,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "M27",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 지혜\n사업자번호 593-91-62486  서울 종로구 (통일부 공개내역 상호)\n거래일시 2026-08-20 19:05\n품목  수량  금액\n돼지국밥  3  90,000\n합계 90,000원 (부가세 포함)\n신용카드 승인 18354761  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-08-20(목) 19:05~20:05\n회의장소: 지혜 (서울 종로구 (통일부 공개내역 상호))\n회의목적: 실증 기관 요구사항 청취 회의\n회의내용: 실증 기관 요구사항 청취 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원)\n참석자(외부·과제 미참여): 김나래(한국과학기술기획평가원 연구위원), 윤도현(한국연구재단 PM)\n집행금액: 90,000원 (참석 3명, 1인당 30,000원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 90000,
+   "date": "2026-08-20",
+   "time": "19:05",
+   "vendor_name": "지혜",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "김나래",
+     "affiliation": "한국과학기술기획평가원 연구위원",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "윤도현",
+     "affiliation": "한국연구재단 PM",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "실증 기관 요구사항 청취 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "외부있음",
+   "통일부시드",
+   "공개데이터시드"
+  ],
+  "source": "통일부 기관장 업무추진비 공개내역 2022-11-03 지혜 90,000원 — 상호·금액 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "M28",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 신씨화로\n사업자번호 551-30-24408  중구 서소문로11길2\n거래일시 2026-01-15 12:43\n품목  수량  금액\n비빔밥  3  99,000\n합계 99,000원 (부가세 포함)\n신용카드 승인 55641228  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-01-15(목) 12:43~13:43\n회의장소: 신씨화로 (중구 서소문로11길2)\n회의목적: 외부 자문위원 초청 기술 자문 회의\n회의내용: 외부 자문위원 초청 기술 자문 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원)\n참석자(외부·과제 미참여): 장미란(고려대학교 연구교수)\n집행금액: 99,000원 (참석 3명, 1인당 33,000원)"
+   },
+   {
+    "kind": "내부결재문서",
+    "text": "[내부결재문서] 회의비 집행 품의 — 결재 완료 2026-01-13 (회의 시작 전)\n과제번호 2026-DEMO-001 · 회의 일시 2026-01-15 · 목적 외부 자문위원 초청 기술 자문 회의\n외부참석자: 장미란(고려대학교 연구교수) · 사용 예정 금액 99,000원"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 99000,
+   "date": "2026-01-15",
+   "time": "12:43",
+   "vendor_name": "신씨화로",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 3,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "장미란",
+     "affiliation": "고려대학교 연구교수",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "외부 자문위원 초청 기술 자문 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "보완",
+  "tags": [
+   "1인한도초과",
+   "W1",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-11-03 신씨화로 3명 24,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "M-INST-CAP"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": false
+ },
+ {
+  "id": "M29",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] 방태山막국수\n사업자번호 680-29-80335  서울 종로구 (통일부 공개내역 상호)\n거래일시 2026-06-12 12:10\n품목  수량  금액\n된장찌개  5  64,500\n음료  1  300\n합계 64,800원 (부가세 포함)\n신용카드 승인 23618316  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-06-12(금) 12:10~13:10\n회의장소: 방태山막국수 (서울 종로구 (통일부 공개내역 상호))\n회의목적: 외부 자문위원 초청 기술 자문 회의\n회의내용: 외부 자문위원 초청 기술 자문 회의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원), 정수진(한국전자통신연구원 연구원)\n참석자(외부·과제 미참여): 박민수(KAIST 교수), 이준호(서울대학교 부교수)\n집행금액: 64,800원 (참석 5명, 1인당 12,960원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 64800,
+   "date": "2026-06-12",
+   "time": "12:10",
+   "vendor_name": "방태山막국수",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 5,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "박민수",
+     "affiliation": "KAIST 교수",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "이준호",
+     "affiliation": "서울대학교 부교수",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "외부 자문위원 초청 기술 자문 회의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "외부있음",
+   "통일부시드",
+   "공개데이터시드"
+  ],
+  "source": "통일부 기관장 업무추진비 공개내역 2020-05-29 방태山막국수 205,000원 — 상호·금액 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "M30",
+  "docs": [
+   {
+    "kind": "영수증",
+    "text": "[카드매출전표] （주）바닷가작은부엌\n사업자번호 172-36-90487  중구 덕수궁길7\n거래일시 2026-09-10 13:17\n품목  수량  금액\n된장찌개  5  81,000\n합계 81,000원 (부가세 포함)\n신용카드 승인 60496650  연구비카드"
+   },
+   {
+    "kind": "회의록",
+    "text": "[회의록] 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연 · 연구책임자 김지우(한국전자통신연구원)\n회의일시: 2026-09-10(목) 13:17~14:17\n회의장소: （주）바닷가작은부엌 (중구 덕수궁길7)\n회의목적: 시제품 평가 지표 협의\n회의내용: 시제품 평가 지표 협의 관련 안건 검토, 의견 수렴, 후속 일정 확정.\n참석자(참여연구자): 김철수(한국전자통신연구원 선임연구원), 이영희(한국전자통신연구원 책임연구원), 정수진(한국전자통신연구원 연구원)\n참석자(외부·과제 미참여): 오세훈(㈜퓨처테크 대표), 장미란(고려대학교 연구교수)\n집행금액: 81,000원 (참석 5명, 1인당 16,200원)"
+   }
+  ],
+  "gold": {
+   "category": "회의비",
+   "amount_total": 81000,
+   "date": "2026-09-10",
+   "time": "13:17",
+   "vendor_name": "（주）바닷가작은부엌",
+   "vendor_type": "식당",
+   "has_alcohol": false,
+   "attendee_count": 5,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    },
+    {
+     "name": "오세훈",
+     "affiliation": "㈜퓨처테크 대표",
+     "external": true,
+     "participant": false
+    },
+    {
+     "name": "장미란",
+     "affiliation": "고려대학교 연구교수",
+     "external": true,
+     "participant": false
+    }
+   ],
+   "purpose": "시제품 평가 지표 협의",
+   "vat_included": true
+  },
+  "flags": {
+   "has_simplified_evidence": false,
+   "basic_project": false,
+   "innovation_fund": false,
+   "on_trip": []
+  },
+  "intended": "가능",
+  "tags": [
+   "외부있음",
+   "공개데이터시드"
+  ],
+  "source": "서울시 업무추진비 공개내역 2017-07-18 （주）바닷가작은부엌 5명 81,000원 — 상호·인원·금액·시각 참고",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T01",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: 부산. 기간: 2026-06-20 ~ 2026-06-21\n출장목적: 한국정보과학회 하계학술대회 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 119,600원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 279,600원\n결재일: 2026-06-13"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: 부산. 기간: 2026-06-20 ~ 2026-06-21\n출장목적: 한국정보과학회 하계학술대회\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 119,600원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 279,600원 (집행일 2026-06-20)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→부산 왕복\n승차일 2026-06-20\n운임 119,600원\n결제 연구비카드 승인 29938108"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 279600,
+   "date": "2026-06-20",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "한국정보과학회 하계학술대회",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "부산",
+    "start": "2026-06-20",
+    "end": "2026-06-21",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국내-가능"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T02",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 대전. 기간: 2026-06-24 ~ 2026-06-24\n출장목적: 출연연 공동 워크숍 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 47,400원, 일비 1일 20,000원, 식비 1일 20,000원 합계 87,400원\n결재일: 2026-06-17"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 대전. 기간: 2026-06-24 ~ 2026-06-24\n출장목적: 출연연 공동 워크숍\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 47,400원, 일비 1일 20,000원, 식비 1일 20,000원 합계 87,400원 (집행일 2026-06-24)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→대전 왕복\n승차일 2026-06-24\n운임 47,400원\n결제 연구비카드 승인 95149012"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 87400,
+   "date": "2026-06-24",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "출연연 공동 워크숍",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "대전",
+    "start": "2026-06-24",
+    "end": "2026-06-24",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국내-당일"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T03",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 광주. 기간: 2026-07-07 ~ 2026-07-08\n출장목적: 실증 기관 현장 방문 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 93,600원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 253,600원\n결재일: 2026-06-30"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 광주. 기간: 2026-07-07 ~ 2026-07-08\n출장목적: 실증 기관 현장 방문\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 93,600원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 253,600원 (집행일 2026-07-07)\n증빙: 승차권 영수증, 숙박 카드매출전표\n비고: 학회 측 점심 제공(등록비 포함) — 식비 전액 청구"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→광주 왕복\n승차일 2026-07-07\n운임 93,600원\n결제 연구비카드 승인 43857462"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 253600,
+   "date": "2026-07-07",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "실증 기관 현장 방문",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "광주",
+    "start": "2026-07-07",
+    "end": "2026-07-08",
+    "domestic": true,
+    "meals_provided": true,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": true,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "식사제공-전액청구",
+   "감사사례-C-11"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조 · 감사사례-C-11",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-25-7-MEAL"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T04",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: 대구. 기간: 2026-07-14 ~ 2026-07-15\n출장목적: 협력기업 기술 협의 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 87,000원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 247,000원\n결재일: 2026-07-07"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: 대구. 기간: 2026-07-14 ~ 2026-07-15\n출장목적: 협력기업 기술 협의\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 87,000원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 247,000원 (집행일 2026-07-14)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→대구 왕복\n승차일 2026-07-14\n운임 87,000원\n결제 연구비카드 승인 56625835"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 247000,
+   "date": "2026-07-14",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "협력기업 기술 협의",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "대구",
+    "start": "2026-07-14",
+    "end": "2026-07-15",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국내-가능"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T05",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 제주. 기간: 2026-07-21 ~ 2026-07-23\n출장목적: 국제 AI 심포지엄 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 196,000원, 일비 3일 60,000원, 식비 3일 60,000원, 숙박비 2박 160,000원 합계 476,000원\n결재일: 2026-07-14"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 제주. 기간: 2026-07-21 ~ 2026-07-23\n출장목적: 국제 AI 심포지엄\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 196,000원, 일비 3일 60,000원, 식비 3일 60,000원, 숙박비 2박 160,000원 합계 476,000원 (집행일 2026-07-21)\n증빙: 승차권 영수증, 숙박 카드매출전표\n비고: 학회 측 점심 제공(등록비 포함) — 식비 전액 청구"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→제주 왕복\n승차일 2026-07-21\n운임 196,000원\n결제 연구비카드 승인 90836544"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 476000,
+   "date": "2026-07-21",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "국제 AI 심포지엄",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "제주",
+    "start": "2026-07-21",
+    "end": "2026-07-23",
+    "domestic": true,
+    "meals_provided": true,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": true,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "식사제공-전액청구",
+   "감사사례-C-15"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조 · 감사사례-C-15",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-25-7-MEAL"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T06",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 강릉. 기간: 2026-08-04 ~ 2026-08-05\n출장목적: 데이터 수집 현장 조사 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 55,200원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 215,200원\n결재일: 2026-07-28"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 강릉. 기간: 2026-08-04 ~ 2026-08-05\n출장목적: 데이터 수집 현장 조사\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 55,200원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 215,200원 (집행일 2026-08-04)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 215200,
+   "date": "2026-08-04",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "데이터 수집 현장 조사",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "강릉",
+    "start": "2026-08-04",
+    "end": "2026-08-05",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": false
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "교통증빙없음"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-INST-EVID"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T07",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: 전주. 기간: 2026-08-11 ~ 2026-08-12\n출장목적: 지역 실증센터 협의 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 69,800원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 229,800원\n결재일: 2026-08-04"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: 전주. 기간: 2026-08-11 ~ 2026-08-12\n출장목적: 지역 실증센터 협의\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 69,800원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 229,800원 (집행일 2026-08-11)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→전주 왕복\n승차일 2026-08-11\n운임 69,800원\n결제 연구비카드 승인 58877189"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 229800,
+   "date": "2026-08-11",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "지역 실증센터 협의",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "전주",
+    "start": "2026-08-11",
+    "end": "2026-08-12",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국내-가능"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T08",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 포항. 기간: 2026-08-18 ~ 2026-08-20\n출장목적: 장비 공동 활용 협의 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 104,600원, 일비 3일 60,000원, 식비 3일 60,000원, 숙박비 2박 160,000원 합계 384,600원\n결재일: 2026-08-11"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 포항. 기간: 2026-08-18 ~ 2026-08-20\n출장목적: 장비 공동 활용 협의\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 104,600원, 일비 3일 60,000원, 식비 3일 60,000원, 숙박비 2박 160,000원 합계 384,600원 (집행일 2026-08-18)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→포항 왕복\n승차일 2026-08-18\n운임 104,600원\n결제 연구비카드 승인 73639532"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 384600,
+   "date": "2026-08-18",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "장비 공동 활용 협의",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "포항",
+    "start": "2026-08-18",
+    "end": "2026-08-20",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국내-가능"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T09",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 세종. 기간: 2026-08-25 ~ 2026-08-25\n출장목적: 과기정통부 과제 점검회의 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 39,600원, 일비 1일 20,000원, 식비 1일 20,000원 합계 79,600원\n결재일: 2026-08-18"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 세종. 기간: 2026-08-25 ~ 2026-08-25\n출장목적: 과기정통부 과제 점검회의\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 39,600원, 일비 1일 20,000원, 식비 1일 20,000원 합계 79,600원 (집행일 2026-08-25)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→세종 왕복\n승차일 2026-08-25\n운임 39,600원\n결제 연구비카드 승인 26487605"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 79600,
+   "date": "2026-08-25",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "과기정통부 과제 점검회의",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "세종",
+    "start": "2026-08-25",
+    "end": "2026-08-25",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국내-당일"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T10",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: 춘천. 기간: 2026-09-01 ~ 2026-09-02\n출장목적: 공동연구기관 회의 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 42,800원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 202,800원\n결재일: 2026-08-25"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: 춘천. 기간: 2026-09-01 ~ 2026-09-02\n출장목적: 공동연구기관 회의\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 42,800원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 202,800원 (집행일 2026-09-01)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 202800,
+   "date": "2026-09-01",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "공동연구기관 회의",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "춘천",
+    "start": "2026-09-01",
+    "end": "2026-09-02",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": false
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "교통증빙없음"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-INST-EVID"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T11",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 천안. 기간: 2026-09-08 ~ 2026-09-08\n출장목적: 시제품 평가 회의 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 30,400원, 일비 1일 20,000원, 식비 1일 13,334원, (학회 제공 식사 제외 후 산정) 합계 63,734원\n결재일: 2026-09-01"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 천안. 기간: 2026-09-08 ~ 2026-09-08\n출장목적: 시제품 평가 회의\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 30,400원, 일비 1일 20,000원, 식비 1일 13,334원, (학회 제공 식사 제외 후 산정) 합계 63,734원 (집행일 2026-09-08)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→천안 왕복\n승차일 2026-09-08\n운임 30,400원\n결제 연구비카드 승인 25482486"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 63734,
+   "date": "2026-09-08",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "시제품 평가 회의",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "천안",
+    "start": "2026-09-08",
+    "end": "2026-09-08",
+    "domestic": true,
+    "meals_provided": true,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": false,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "식사제공-차감완료"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T12",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 울산. 기간: 2026-09-15 ~ 2026-09-16\n출장목적: 산업체 현장 실증 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 113,400원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 273,400원\n결재일: 2026-09-08"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 울산. 기간: 2026-09-15 ~ 2026-09-16\n출장목적: 산업체 현장 실증\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 113,400원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 273,400원 (집행일 2026-09-15)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→울산 왕복\n승차일 2026-09-15\n운임 113,400원\n결제 연구비카드 승인 75507385"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 273400,
+   "date": "2026-09-15",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "산업체 현장 실증",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "울산",
+    "start": "2026-09-15",
+    "end": "2026-09-16",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국내-가능"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T13",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: 부산. 기간: 2026-05-12 ~ 2026-05-13\n출장목적: 한국정보과학회 하계학술대회 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 119,600원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 279,600원\n결재일: 2026-05-05"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: 부산. 기간: 2026-05-12 ~ 2026-05-13\n출장목적: 한국정보과학회 하계학술대회\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 119,600원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 279,600원 (집행일 2026-05-12)\n증빙: 승차권 영수증, 숙박 카드매출전표\n비고: 학회 측 점심 제공(등록비 포함) — 식비 전액 청구"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→부산 왕복\n승차일 2026-05-12\n운임 119,600원\n결제 연구비카드 승인 72544046"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 279600,
+   "date": "2026-05-12",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "한국정보과학회 하계학술대회",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "부산",
+    "start": "2026-05-12",
+    "end": "2026-05-13",
+    "domestic": true,
+    "meals_provided": true,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": true,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "식사제공-전액청구"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-25-7-MEAL"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T14",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 광주. 기간: 2026-05-19 ~ 2026-05-20\n출장목적: 실증 기관 현장 방문 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 93,600원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 253,600원\n결재일: 2026-05-12"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 광주. 기간: 2026-05-19 ~ 2026-05-20\n출장목적: 실증 기관 현장 방문\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 93,600원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 253,600원 (집행일 2026-05-19)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→광주 왕복\n승차일 2026-05-19\n운임 93,600원\n결제 연구비카드 승인 74477539"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 253600,
+   "date": "2026-05-19",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "실증 기관 현장 방문",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "광주",
+    "start": "2026-05-19",
+    "end": "2026-05-20",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국내-가능"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T15",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 제주. 기간: 2026-04-14 ~ 2026-04-16\n출장목적: 국제 AI 심포지엄 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 196,000원, 일비 3일 60,000원, 식비 3일 60,000원, 숙박비 2박 160,000원 합계 476,000원\n결재일: 2026-04-07"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 제주. 기간: 2026-04-14 ~ 2026-04-16\n출장목적: 국제 AI 심포지엄\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 196,000원, 일비 3일 60,000원, 식비 3일 60,000원, 숙박비 2박 160,000원 합계 476,000원 (집행일 2026-04-14)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 476000,
+   "date": "2026-04-14",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "국제 AI 심포지엄",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "제주",
+    "start": "2026-04-14",
+    "end": "2026-04-16",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": false
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "교통증빙없음"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-INST-EVID"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": false
+ },
+ {
+  "id": "T16",
+  "docs": [
+   {
+    "kind": "출장결과보고서",
+    "text": "[국외출장결과보고서] 국외 출장 — 과제번호 2026-DEMO-001\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: Boston, USA. 기간: 2026-06-20 ~ 2026-06-25\n출장목적: NeurIPS 워크숍 발표\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 항공료 1,850,000원, 일비 6일 228,000원, 식비 6일 1,440,000원, 숙박비 5박 1,100,000원 합계 4,618,000원 (집행일 2026-06-20)\n증빙: e-ticket, 탑승권, 호텔 인보이스, 학회 참가증"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Boston 왕복\n출발일 2026-06-20\n항공료 1,850,000원\n결제 연구비카드 승인 74939188"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 4618000,
+   "date": "2026-06-20",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "NeurIPS 워크숍 발표",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Boston, USA",
+    "start": "2026-06-20",
+    "end": "2026-06-25",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": false,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "국외-계획서없음"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-25-8-PLAN"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T17",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[국외출장계획서] 국외 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: Tokyo, Japan. 기간: 2026-05-25 ~ 2026-05-28\n출장목적: IEEE ICASSP 발표 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 학회 등록·발표·협의\n예상 경비: 항공료 620,000원, 일비 4일 152,000원, 식비 4일 720,000원, 숙박비 3박 660,000원 합계 2,152,000원\n결재일: 2026-05-18"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Tokyo 왕복\n출발일 2026-05-25\n항공료 620,000원\n결제 연구비카드 승인 51856109"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 2152000,
+   "date": "2026-05-25",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "IEEE ICASSP 발표",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Tokyo, Japan",
+    "start": "2026-05-25",
+    "end": "2026-05-28",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": false,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "국외-결과보고서없음"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-25-8-RPT"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T18",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[국외출장계획서] 국외 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: Singapore. 기간: 2026-07-27 ~ 2026-07-31\n출장목적: ACL 학회 참가 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 학회 등록·발표·협의\n예상 경비: 항공료 890,000원, 일비 5일 190,000원, 식비 5일 1,050,000원, 숙박비 4박 880,000원 합계 3,010,000원\n결재일: 2026-07-20"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[국외출장결과보고서] 국외 출장 — 과제번호 2026-DEMO-001\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: Singapore. 기간: 2026-07-27 ~ 2026-07-31\n출장목적: ACL 학회 참가\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 항공료 890,000원, 일비 5일 190,000원, 식비 5일 1,050,000원, 숙박비 4박 880,000원 합계 3,010,000원 (집행일 2026-07-27)\n증빙: e-ticket, 탑승권, 호텔 인보이스, 학회 참가증"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Singapore 왕복\n출발일 2026-07-27\n항공료 890,000원\n결제 연구비카드 승인 21527244"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 3010000,
+   "date": "2026-07-27",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "ACL 학회 참가",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Singapore",
+    "start": "2026-07-27",
+    "end": "2026-07-31",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국외-가능"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T19",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[국외출장계획서] 국외 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: Berlin, Germany. 기간: 2026-08-03 ~ 2026-08-07\n출장목적: 협력기관 공동연구 협의 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 학회 등록·발표·협의\n예상 경비: 항공료 1,420,000원, 일비 5일 190,000원, 식비 5일 1,000,000원, 숙박비 4박 880,000원 합계 3,490,000원\n결재일: 2026-07-27"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[국외출장결과보고서] 국외 출장 — 과제번호 2026-DEMO-001\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: Berlin, Germany. 기간: 2026-08-03 ~ 2026-08-07\n출장목적: 협력기관 공동연구 협의\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 항공료 1,420,000원, 일비 5일 190,000원, 식비 5일 1,000,000원, 숙박비 4박 880,000원 합계 3,490,000원 (집행일 2026-08-03)\n증빙: e-ticket, 탑승권, 호텔 인보이스, 학회 참가증"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Berlin 왕복\n출발일 2026-08-03\n항공료 1,420,000원\n결제 연구비카드 승인 29343122"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 3490000,
+   "date": "2026-08-03",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "협력기관 공동연구 협의",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Berlin, Germany",
+    "start": "2026-08-03",
+    "end": "2026-08-07",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국외-가능"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T20",
+  "docs": [
+   {
+    "kind": "출장결과보고서",
+    "text": "[국외출장결과보고서] 국외 출장 — 과제번호 2026-DEMO-001\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: Vienna, Austria. 기간: 2026-09-06 ~ 2026-09-11\n출장목적: ISCA Interspeech 발표\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 항공료 1,510,000원, 일비 6일 228,000원, 식비 6일 1,140,000원, 숙박비 5박 1,100,000원 합계 3,978,000원 (집행일 2026-09-06)\n증빙: e-ticket, 탑승권, 호텔 인보이스, 학회 참가증\n비고: 학회 측 점심 제공(등록비 포함) — 식비 전액 청구"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Vienna 왕복\n출발일 2026-09-06\n항공료 1,510,000원\n결제 연구비카드 승인 23715389"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 3978000,
+   "date": "2026-09-06",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "ISCA Interspeech 발표",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Vienna, Austria",
+    "start": "2026-09-06",
+    "end": "2026-09-11",
+    "domestic": false,
+    "meals_provided": true,
+    "plan_doc": false,
+    "report_doc": true,
+    "meal_claimed_full": true,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "국외-계획서없음",
+   "식사제공-전액청구"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-25-7-MEAL",
+    "T-25-8-PLAN"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T21",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[국외출장계획서] 국외 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: San Jose, USA. 기간: 2026-10-12 ~ 2026-10-16\n출장목적: 협력기업 기술 실사 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 학회 등록·발표·협의\n예상 경비: 항공료 1,930,000원, 일비 5일 190,000원, 식비 5일 1,300,000원, 숙박비 4박 880,000원 합계 4,300,000원\n결재일: 2026-10-05"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→San Jose 왕복\n출발일 2026-10-12\n항공료 1,930,000원\n결제 연구비카드 승인 55987803"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 4300000,
+   "date": "2026-10-12",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "협력기업 기술 실사",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "San Jose, USA",
+    "start": "2026-10-12",
+    "end": "2026-10-16",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": false,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국외-미래출장-결과보고서불요"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T22",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[국외출장계획서] 국외 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: Vancouver, Canada. 기간: 2026-06-15 ~ 2026-06-20\n출장목적: CVPR 워크숍 발표 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 학회 등록·발표·협의\n예상 경비: 항공료 1,760,000원, 일비 6일 228,000원, 식비 6일 1,380,000원, 숙박비 5박 1,100,000원 합계 4,468,000원\n결재일: 2026-06-08"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[국외출장결과보고서] 국외 출장 — 과제번호 2026-DEMO-001\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: Vancouver, Canada. 기간: 2026-06-15 ~ 2026-06-20\n출장목적: CVPR 워크숍 발표\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 항공료 1,760,000원, 일비 6일 228,000원, 식비 6일 1,380,000원, 숙박비 5박 1,100,000원 합계 4,468,000원 (집행일 2026-06-15)\n증빙: e-ticket, 탑승권, 호텔 인보이스, 학회 참가증"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Vancouver 왕복\n출발일 2026-06-15\n항공료 1,760,000원\n결제 연구비카드 승인 45535068"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 4468000,
+   "date": "2026-06-15",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "CVPR 워크숍 발표",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Vancouver, Canada",
+    "start": "2026-06-15",
+    "end": "2026-06-20",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국외-가능"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T23",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[국외출장계획서] 국외 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: Seoul→Taipei. 기간: 2026-06-02 ~ 2026-06-05\n출장목적: COMPUTEX 기술 조사 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 학회 등록·발표·협의\n예상 경비: 항공료 480,000원, 일비 4일 152,000원, 식비 4일 600,000원, 숙박비 3박 660,000원 합계 1,892,000원\n결재일: 2026-05-26"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Seoul→Taipei 왕복\n출발일 2026-06-02\n항공료 480,000원\n결제 연구비카드 승인 74239549"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 1892000,
+   "date": "2026-06-02",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "COMPUTEX 기술 조사",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Seoul→Taipei",
+    "start": "2026-06-02",
+    "end": "2026-06-05",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": false,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "국외-결과보고서없음"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-25-8-RPT"
+   ],
+   "notice_no": "제2026-38호"
+  },
+  "image": false
+ },
+ {
+  "id": "T24",
+  "docs": [
+   {
+    "kind": "출장결과보고서",
+    "text": "[국외출장결과보고서] 국외 출장 — 과제번호 2026-DEMO-001\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: Boston, USA. 기간: 2025-12-08 ~ 2025-12-13\n출장목적: NeurIPS 워크숍 발표\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 항공료 1,850,000원, 일비 6일 228,000원, 식비 6일 1,440,000원, 숙박비 5박 1,100,000원 합계 4,618,000원 (집행일 2025-12-08)\n증빙: e-ticket, 탑승권, 호텔 인보이스, 학회 참가증"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Boston 왕복\n출발일 2025-12-08\n항공료 1,850,000원\n결제 연구비카드 승인 31667923"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 4618000,
+   "date": "2025-12-08",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "NeurIPS 워크숍 발표",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Boston, USA",
+    "start": "2025-12-08",
+    "end": "2025-12-13",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": false,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "국외-계획서없음"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-25-8-PLAN"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": false
+ },
+ {
+  "id": "T25",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[국외출장계획서] 국외 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: Tokyo, Japan. 기간: 2026-01-19 ~ 2026-01-22\n출장목적: IEEE ICASSP 발표 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 학회 등록·발표·협의\n예상 경비: 항공료 620,000원, 일비 4일 152,000원, 식비 4일 720,000원, 숙박비 3박 660,000원 합계 2,152,000원\n결재일: 2026-01-12"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[국외출장결과보고서] 국외 출장 — 과제번호 2026-DEMO-001\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: Tokyo, Japan. 기간: 2026-01-19 ~ 2026-01-22\n출장목적: IEEE ICASSP 발표\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 항공료 620,000원, 일비 4일 152,000원, 식비 4일 720,000원, 숙박비 3박 660,000원 합계 2,152,000원 (집행일 2026-01-19)\n증빙: e-ticket, 탑승권, 호텔 인보이스, 학회 참가증"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Tokyo 왕복\n출발일 2026-01-19\n항공료 620,000원\n결제 연구비카드 승인 79301246"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 2152000,
+   "date": "2026-01-19",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "IEEE ICASSP 발표",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Tokyo, Japan",
+    "start": "2026-01-19",
+    "end": "2026-01-22",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국외-가능"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": false
+ },
+ {
+  "id": "T26",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[국외출장계획서] 국외 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: Singapore. 기간: 2026-03-09 ~ 2026-03-13\n출장목적: ACL 학회 참가 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 학회 등록·발표·협의\n예상 경비: 항공료 890,000원, 일비 5일 190,000원, 식비 5일 1,050,000원, 숙박비 4박 880,000원 합계 3,010,000원\n결재일: 2026-03-02"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[국외출장결과보고서] 국외 출장 — 과제번호 2026-DEMO-001\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: Singapore. 기간: 2026-03-09 ~ 2026-03-13\n출장목적: ACL 학회 참가\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 항공료 890,000원, 일비 5일 190,000원, 식비 5일 1,050,000원, 숙박비 4박 880,000원 합계 3,010,000원 (집행일 2026-03-09)\n증빙: e-ticket, 탑승권, 호텔 인보이스, 학회 참가증"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 3010000,
+   "date": "2026-03-09",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "ACL 학회 참가",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Singapore",
+    "start": "2026-03-09",
+    "end": "2026-03-13",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": false
+   }
+  },
+  "intended": "보완",
+  "tags": [
+   "국외-교통증빙없음"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "보완",
+   "rule_ids": [
+    "T-INST-EVID"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": false
+ },
+ {
+  "id": "T27",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[국외출장계획서] 국외 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: Berlin, Germany. 기간: 2026-04-06 ~ 2026-04-10\n출장목적: 협력기관 공동연구 협의 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 학회 등록·발표·협의\n예상 경비: 항공료 1,420,000원, 일비 5일 190,000원, 식비 5일 666,670원, 숙박비 4박 880,000원, (학회 제공 식사 제외 후 산정) 합계 3,156,670원\n결재일: 2026-03-30"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[국외출장결과보고서] 국외 출장 — 과제번호 2026-DEMO-001\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: Berlin, Germany. 기간: 2026-04-06 ~ 2026-04-10\n출장목적: 협력기관 공동연구 협의\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 항공료 1,420,000원, 일비 5일 190,000원, 식비 5일 666,670원, 숙박비 4박 880,000원, (학회 제공 식사 제외 후 산정) 합계 3,156,670원 (집행일 2026-04-06)\n증빙: e-ticket, 탑승권, 호텔 인보이스, 학회 참가증"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Berlin 왕복\n출발일 2026-04-06\n항공료 1,420,000원\n결제 연구비카드 승인 13099855"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 3156670,
+   "date": "2026-04-06",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "협력기관 공동연구 협의",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Berlin, Germany",
+    "start": "2026-04-06",
+    "end": "2026-04-10",
+    "domestic": false,
+    "meals_provided": true,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": false,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국외-식사제공-차감완료"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": false
+ },
+ {
+  "id": "T28",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[국외출장계획서] 국외 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: Vienna, Austria. 기간: 2026-02-16 ~ 2026-02-21\n출장목적: ISCA Interspeech 발표 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 학회 등록·발표·협의\n예상 경비: 항공료 1,510,000원, 일비 6일 228,000원, 식비 6일 1,140,000원, 숙박비 5박 1,100,000원 합계 3,978,000원\n결재일: 2026-02-09"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[국외출장결과보고서] 국외 출장 — 과제번호 2026-DEMO-001\n출장자: 김철수(한국전자통신연구원 선임연구원)\n출장지: Vienna, Austria. 기간: 2026-02-16 ~ 2026-02-21\n출장목적: ISCA Interspeech 발표\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 항공료 1,510,000원, 일비 6일 228,000원, 식비 6일 1,140,000원, 숙박비 5박 1,100,000원 합계 3,978,000원 (집행일 2026-02-16)\n증빙: e-ticket, 탑승권, 호텔 인보이스, 학회 참가증"
+   },
+   {
+    "kind": "영수증",
+    "text": "[e-ticket 영수증] 항공 인천→Vienna 왕복\n출발일 2026-02-16\n항공료 1,510,000원\n결제 연구비카드 승인 37543491"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 3978000,
+   "date": "2026-02-16",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "김철수",
+     "affiliation": "한국전자통신연구원 선임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "ISCA Interspeech 발표",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "Vienna, Austria",
+    "start": "2026-02-16",
+    "end": "2026-02-21",
+    "domestic": false,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국외-가능"
+  ],
+  "source": "KAIST [별표8-1] 국외출장계획서·[별표10-1] 국외출장결과보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": false
+ },
+ {
+  "id": "T29",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 전주. 기간: 2026-03-24 ~ 2026-03-25\n출장목적: 지역 실증센터 협의 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 69,800원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 229,800원\n결재일: 2026-03-17"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 이영희(한국전자통신연구원 책임연구원)\n출장지: 전주. 기간: 2026-03-24 ~ 2026-03-25\n출장목적: 지역 실증센터 협의\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 69,800원, 일비 2일 40,000원, 식비 2일 40,000원, 숙박비 1박 80,000원 합계 229,800원 (집행일 2026-03-24)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→전주 왕복\n승차일 2026-03-24\n운임 69,800원\n결제 연구비카드 승인 80901507"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 229800,
+   "date": "2026-03-24",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "이영희",
+     "affiliation": "한국전자통신연구원 책임연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "지역 실증센터 협의",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "전주",
+    "start": "2026-03-24",
+    "end": "2026-03-25",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국내-가능"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": false
+ },
+ {
+  "id": "T30",
+  "docs": [
+   {
+    "kind": "출장신청서",
+    "text": "[출장품의 및 여비신청서] 국내 출장 — 과제번호 2026-DEMO-001 · 과제명 연구비 판정관 시연\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 세종. 기간: 2026-02-03 ~ 2026-02-03\n출장목적: 과기정통부 과제 점검회의 (과제 연관성: 연구 결과 발표 및 협의)\n세부일정: 이동·회의·복귀\n예상 경비: 운임 39,600원, 일비 1일 20,000원, 식비 1일 20,000원 합계 79,600원\n결재일: 2026-01-27"
+   },
+   {
+    "kind": "출장결과보고서",
+    "text": "[출장결과보고서(복명서)] 국내 출장 — 과제번호 2026-DEMO-001\n출장자: 정수진(한국전자통신연구원 연구원)\n출장지: 세종. 기간: 2026-02-03 ~ 2026-02-03\n출장목적: 과기정통부 과제 점검회의\n주요 업무내용: 발표 및 질의응답, 협력 기관 면담, 후속 협의 일정 확정.\n여비 정산: 운임 39,600원, 일비 1일 20,000원, 식비 1일 20,000원 합계 79,600원 (집행일 2026-02-03)\n증빙: 승차권 영수증, 숙박 카드매출전표"
+   },
+   {
+    "kind": "영수증",
+    "text": "[승차권 영수증] KTX 서울→세종 왕복\n승차일 2026-02-03\n운임 39,600원\n결제 연구비카드 승인 58553593"
+   }
+  ],
+  "gold": {
+   "category": "출장비",
+   "amount_total": 79600,
+   "date": "2026-02-03",
+   "time": null,
+   "vendor_name": null,
+   "vendor_type": "교통",
+   "has_alcohol": false,
+   "attendee_count": 1,
+   "attendees": [
+    {
+     "name": "정수진",
+     "affiliation": "한국전자통신연구원 연구원",
+     "external": false,
+     "participant": true
+    }
+   ],
+   "purpose": "과기정통부 과제 점검회의",
+   "vat_included": null
+  },
+  "flags": {
+   "trip": {
+    "destination": "세종",
+    "start": "2026-02-03",
+    "end": "2026-02-03",
+    "domestic": true,
+    "meals_provided": null,
+    "plan_doc": true,
+    "report_doc": true,
+    "meal_claimed_full": null,
+    "has_transport_evidence": true
+   }
+  },
+  "intended": "가능",
+  "tags": [
+   "국내-당일"
+  ],
+  "source": "고려대 [양식5-1] 출장품의·여비신청서·[양식6] 출장보고서 구조",
+  "expected": {
+   "verdict": "가능",
+   "rule_ids": [
+    "OK"
+   ],
+   "notice_no": "제2023-49호(2024-12-01 시행)"
+  },
+  "image": false
+ }
+]

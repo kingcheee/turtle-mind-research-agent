@@ -1,0 +1,18 @@
+<div class="detail">
+  <div class="sec-h"><strong>심판 <span class="mono">#{{ q.id }}</span></strong><span>{{ q.kind }}</span><span class="qst {{ q.status }}">{{ q.status }}</span>{% if j %}<span class="vd {{ j.verdict|vc }}"><i class="sh {{ j.verdict|vc }}"></i>{{ j.verdict }}</span>{% endif %}<span class="grow"></span><a class="ext" href="/case/{{ q.case_id }}">건 <span class="mono">#{{ q.case_id }}</span> 열기</a></div>
+  <dl class="facts">
+    <dt>건</dt><dd>{{ case.category }} · {{ extracted.vendor_name or (case.trip.destination if case.trip else '') or '—' }} · <span class="num">{{ case.amount_total|won }}</span><span class="won">원</span></dd>
+    <dt>집행일</dt><dd class="mono">{{ case.date or '—' }}{% if case.time %} {{ case.time }}{% endif %}</dd>
+    <dt>참석</dt><dd>{{ case.attendees|map(attribute='name')|join(', ') or '—' }}</dd>
+    <dt>기한</dt><dd><span class="mono">{{ (q.deadline_at or '')[:16]|replace('T',' ') }}</span> · <span class="due {{ 'over' if q.status=='기한초과' }}">{{ q.deadline_at|dday }}</span></dd>
+    <dt>{{ '연구자 소명' if q.kind=='이의' else '임시 승인' }}</dt><dd>{% if q.statement %}{{ q.statement }}{% else %}<span class="mono">{{ (q.provisional_at or '')[:16]|replace('T',' ') }}</span> 접수 · 선집행{% endif %}</dd>
+  </dl>
+  {% if rows %}<div class="pv-d dd">{% for r in rows %}<div class="pd {{ r.cls }}"><span class="mk">{{ r.mark }}</span><span>{{ r.req }}</span><span class="b">{{ r.fact|mono }}</span><span class="res">{{ r.result }}</span></div>{% endfor %}</div>{% endif %}
+</div>
+{% if q.status in ['대기','기한초과'] %}<form class="decide" hx-post="/admin/decide/{{ q.id }}" hx-target="#admin-panel">
+  <span class="seg"><label><input type="radio" name="decision" value="인정" checked><span>인정</span></label><label><input type="radio" name="decision" value="불인정"><span>불인정</span></label></span>
+  <span class="val grow"><input type="text" name="note" placeholder="결정 메모 — 예: 워크숍 정리 회의로 과제 관련성 확인" aria-label="결정 메모"></span>
+  <label class="chk1"><input type="checkbox" name="register_exception" checked> 예외 사전 등록</label>
+  <span class="val sel"><select name="rule_id" aria-label="예외 규칙">{% for rid, key in exception_keys.items() %}<option value="{{ rid }}" {{ 'selected' if loop.first }}>{{ exception_text(key) }}</option>{% endfor %}<option value="">(등록 안 함)</option></select></span>
+  <button class="btn pri" type="submit">결정</button></form>
+{% else %}<div class="decide done"><span class="qst {{ q.status }}">{{ q.status }}</span><span class="mono mut">{{ (q.decided_at or '')[:16]|replace('T',' ') }}</span><span>{{ q.decided_by or '행정팀' }}</span>{% if q.decision_note %}<span>· {{ q.decision_note }}</span>{% endif %}</div>{% endif %}

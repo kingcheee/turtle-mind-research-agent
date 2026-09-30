@@ -1,0 +1,119 @@
+{%- set ck = '<svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.4 6.3 4.8 8.6 9.6 3.6" fill="none" stroke="currentColor" stroke-width="2"/></svg>' -%}
+{%- macro check(name, label, on, note='') -%}
+<label class="{{ 'on' if on }}"><input type="checkbox" name="{{ name }}" {{ 'checked' if on }}><span class="cb">{{ ck|safe }}</span>{{ label }}{% if note %} <span class="mono mut">{{ note }}</span>{% endif %}</label>
+{%- endmacro -%}
+{%- macro opt3(val, yes, no) -%}
+<option value="null" {{ 'selected' if val is none }}>모름</option><option value="true" {{ 'selected' if val }}>{{ yes }}</option><option value="false" {{ 'selected' if val is sameas false }}>{{ no }}</option>
+{%- endmacro -%}
+{%- set kinds = docs|map(attribute='kind')|list -%}
+<section class="scr" data-screen="review">
+<form id="judge-form" class="scr-form" method="post" action="/judge">
+  <input type="hidden" name="extracted_json" value="{{ extracted_json }}">
+  <input type="hidden" name="docs_json" value="{{ docs_json }}">
+  <input type="hidden" name="doc_types" value="{{ doc_types }}"><input type="hidden" name="source_files" value="{{ source_files }}">
+  <input type="hidden" name="attendees_json" id="attendees_json" value="{{ attendees_json }}">
+  {% if case_id %}<input type="hidden" name="case_id" value="{{ case_id }}">{% endif %}
+  <div class="bar">
+    <div class="steps">
+      <span class="step done"><i>{{ ck|safe }}</i>올리기</span><span class="step-l"></span>
+      <span class="step cur"><i>2</i>확인</span><span class="step-l"></span>
+      <span class="step"><i>3</i>판정</span>
+    </div>
+    <span class="sep"></span>
+    {% if case_id %}<a class="mut" href="/case/{{ case_id }}">#{{ case_id }}</a><span class="mut">수정</span><span class="sep"></span>{% endif %}
+    <span class="mut">{{ case.category }}{% if extracted.vendor_name %} · {{ extracted.vendor_name }}{% endif %}{% for k in kinds|unique %} · {{ k }} {{ kinds|select('equalto', k)|list|length }}{% endfor %}</span>
+    <span class="grow"></span>
+    {% if meta %}<span class="mut">추출 <span class="mono">{{ meta.seconds }}초{% if meta.tg_per_s %} · {{ '%.0f'|format(meta.tg_per_s) }} tok/s{% endif %}</span></span><span class="sep"></span><span class="mut mono">Qwen2.5-1.5B</span>
+    {% else %}<span class="mut">저장된 값 · 고치면 같은 건에 새 판정</span>{% endif %}
+  </div>
+  <div class="split">
+    <div class="ev" id="ev">
+      {% for d in docs %}{% set lines = d.text.split('\n') %}
+      <div class="doc" data-kind="{{ d.kind }}">
+        <div class="doc-h"><span class="ftag">{{ 'IMG' if d.file else 'TXT' }}</span><span class="fn">{{ d.file or d.kind }}</span><span>{{ d.kind }} · {{ 'Tesseract OCR' if d.file else '텍스트 붙여넣기' }}</span><span class="grow"></span><span class="mono mut">{{ lines|length }}행</span></div>
+        {% if d.file %}<div class="rcpt-wrap"><div class="rcpt"><img src="/uploads/{{ d.file }}" alt="{{ d.kind }} 사진"></div></div>{% endif %}
+        <div class="src">{% for line in lines %}<div class="ln"><i>{{ loop.index }}</i><span data-raw>{{ line }}</span></div>{% endfor %}</div>
+      </div>
+      {% else %}<div class="doc"><div class="doc-h"><span class="ftag">—</span><span>원문 없음 — 원문 보존(2026-09-27) 전에 저장된 건</span></div></div>{% endfor %}
+    </div>
+    <div class="sp sp-x" data-t="prev" title="끌어서 크기 조절"></div>
+    <div class="fx" id="fx">
+      <div class="sec">
+        <div class="sec-h"><strong>추출 필드</strong><span class="mono" id="f-total"></span><span class="grow"></span><span id="f-sum"></span></div>
+        <table class="ft" id="fields">
+          <colgroup><col style="width:52px"><col style="width:84px"><col><col class="w-src"><col style="width:104px"></colgroup>
+          <thead><tr><th>#</th><th>필드</th><th>값</th><th>출처</th><th>대조</th></tr></thead>
+          <tbody>
+            <tr data-f="category"><td class="rn"></td><td class="lab">비목</td><td><span class="val"><select name="category">{% for v in ['회의비','출장비','불명'] %}<option {{ 'selected' if case.category==v }}>{{ v }}</option>{% endfor %}</select></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="date"><td class="rn"></td><td class="lab">집행일</td><td><span class="val mono"><input type="date" name="date" value="{{ case.date or '' }}"></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="time"><td class="rn"></td><td class="lab">시각</td><td><span class="val mono"><input type="time" name="time" value="{{ case.time or '' }}"></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="amount_total"><td class="rn"></td><td class="lab">금액</td><td><span class="val mono"><input type="number" name="amount_total" value="{{ case.amount_total if case.amount_total is not none else '' }}"><span class="u">원</span></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="vat_included"><td class="rn"></td><td class="lab">부가세</td><td><span class="val"><select name="vat_included"><option value="">모름</option><option value="true" {{ 'selected' if case.vat_included }}>포함</option><option value="false" {{ 'selected' if case.vat_included is sameas false }}>별도</option></select></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="vendor_name"><td class="rn"></td><td class="lab">가맹점</td><td><span class="val"><input type="text" name="vendor_name" value="{{ extracted.vendor_name or '' }}"></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="vendor_type"><td class="rn"></td><td class="lab">업종</td><td><span class="val"><select name="vendor_type">{% for v in ['','식당','카페','주점','호텔','교통','숙박','기타'] %}<option value="{{ v }}" {{ 'selected' if (case.vendor_type or '')==v }}>{{ v or '모름' }}</option>{% endfor %}</select></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="has_alcohol"><td class="rn"></td><td class="lab">주류</td><td><span class="val"><select name="has_alcohol"><option value="">모름</option><option value="true" {{ 'selected' if case.has_alcohol }}>있음</option><option value="false" {{ 'selected' if case.has_alcohol is sameas false }}>없음</option></select></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="attendee_count"><td class="rn"></td><td class="lab">참석 인원</td><td><span class="val mono"><input type="number" name="attendee_count" value="{{ case.attendee_count or '' }}"><span class="u">명</span></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="purpose"><td class="rn"></td><td class="lab">목적</td><td><span class="val"><input type="text" name="purpose" value="{{ case.purpose or '' }}"></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sec" id="tripbox" {% if case.category!='출장비' %}hidden{% endif %}>
+        <div class="sec-h"><strong>출장</strong><span class="grow"></span><span class="mut">국외면 제25조 제8항 — 계획서·결과보고서</span></div>
+        <table class="ft" id="tripf">
+          <colgroup><col style="width:52px"><col style="width:84px"><col><col class="w-src"><col style="width:104px"></colgroup>
+          <tbody>
+            <tr data-f="trip_destination"><td class="rn"></td><td class="lab">출장지</td><td><span class="val"><input type="text" name="trip_destination" value="{{ case.trip.destination if case.trip and case.trip.destination else '' }}"></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="trip_start"><td class="rn"></td><td class="lab">시작</td><td><span class="val mono"><input type="date" name="trip_start" value="{{ case.trip.start if case.trip and case.trip.start else '' }}"></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="trip_end"><td class="rn"></td><td class="lab">종료</td><td><span class="val mono"><input type="date" name="trip_end" value="{{ case.trip.end if case.trip and case.trip.end else '' }}"></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+            <tr data-f="trip_domestic"><td class="rn"></td><td class="lab">국내외</td><td><span class="val"><select name="trip_domestic"><option value="">모름</option><option value="true" {{ 'selected' if case.trip and case.trip.domestic }}>국내</option><option value="false" {{ 'selected' if case.trip and case.trip.domestic is sameas false }}>국외</option></select></span></td><td class="srcref"></td><td class="cmp"></td></tr>
+          </tbody>
+        </table>
+        <div class="chk">
+          {{ check('trip_plan_doc', '출장계획서 있음', case.trip and case.trip.plan_doc) }}
+          {{ check('trip_report_doc', '출장결과보고서 있음', case.trip and case.trip.report_doc) }}
+          {{ check('trip_meals_provided', '관계기관 식사 제공', case.trip and case.trip.meals_provided) }}
+          {{ check('trip_meal_claimed_full', '식비 전액 청구', case.trip and case.trip.meal_claimed_full) }}
+          {{ check('trip_has_transport_evidence', '교통비 증빙 있음', case.trip and case.trip.has_transport_evidence) }}
+        </div>
+      </div>
+      <div class="sec">
+        <div class="sec-h"><strong>참석자</strong><span class="mono" id="att-n">{{ case.attendees|length }}</span><span class="grow"></span><span id="att-sum"></span><button class="btn sm" type="button" id="att-add">추가</button></div>
+        <table class="ft" id="att">
+          <colgroup><col style="width:52px"><col style="width:96px"><col><col style="width:88px"><col style="width:96px"><col class="w-src"><col style="width:36px"></colgroup>
+          <thead><tr><th>#</th><th>이름</th><th>소속</th><th>기관</th><th>과제</th><th>출처</th><th></th></tr></thead>
+          <tbody>
+          {% for a in case.attendees %}<tr data-f="p{{ loop.index }}">
+            <td class="mono mut">{{ loop.index }}</td>
+            <td><span class="val"><input type="text" value="{{ a.name }}" aria-label="이름"></span></td>
+            <td><span class="val"><input type="text" value="{{ a.affiliation or '' }}" aria-label="소속"></span></td>
+            <td><select class="opt" aria-label="기관">{{ opt3(a.external, '외부', '내부') }}</select></td>
+            <td><select class="opt" aria-label="과제">{{ opt3(a.participant, '참여', '미참여') }}</select></td>
+            <td class="srcref" data-basis="{% if institution and a.affiliation %}{{ '소속 = 기관명' if institution in a.affiliation else '소속 ≠ 기관명' }}{% endif %}{% if participants %} · {{ '명단에 있음' if a.name in participants else '명단에 없음' }}{% endif %}"></td>
+            <td><button class="btn icon sm x" type="button" title="삭제" aria-label="삭제">×</button></td>
+          </tr>{% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="sec">
+        <div class="sec-h"><strong>체크 항목</strong><span class="grow"></span><span class="mut">문서 종류에서 채움 — 고친 값이 판정 입력</span></div>
+        <div class="chk" id="chk">
+          {{ check('has_minutes', '회의록 있음', case.has_minutes) }}
+          {{ check('has_internal_approval', '내부결재문서 있음', case.has_internal_approval) }}
+          {{ check('has_simplified_evidence', '간이 증명자료', case.has_simplified_evidence, '(10만 원 이하 · 제5항 단서)') }}
+          {{ check('basic_project', '출연연 기본사업', case.basic_project, '(~2024-11-30 단서)') }}
+          {{ check('innovation_fund', '연구혁신비 비목', case.innovation_fund, '(2026-06-11부터 제25조의2)') }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ab">
+    <span id="ab-flag"></span>
+    <span class="mut" id="ab-sum"></span>
+    <span class="grow"></span>
+    {% if not case_id %}<button class="btn" type="button" id="re-extract" hx-post="/extract" hx-include="[name=docs_json]" hx-target="#mn" hx-indicator="#judge-form">다시 추출 <kbd>R</kbd></button>
+    <span class="busy">다시 읽는 중</span>{% endif %}
+    <button class="btn pri" type="submit" id="judge-btn">판정 <kbd>⌘↵</kbd></button>
+  </div>
+</form>
+</section>
+<script>PJ.review(document.getElementById('judge-form'))</script>

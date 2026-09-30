@@ -1,0 +1,24 @@
+{#- 09-28 사용자: 미리보기는 판정 결과가 아니라 실제 영수증을 사진으로. 사진이 없으면(텍스트로 올린 영수증) 원문을 전표 모양으로. -#}
+{%- set place = (case.trip.destination if case.trip and case.trip.destination else extracted.vendor_name) -%}
+{%- set receipts = (docs or [])|selectattr('kind','equalto','영수증')|list -%}
+{%- set others = (docs or [])|rejectattr('kind','equalto','영수증')|map(attribute='kind')|list -%}
+<div class="pv-h"><span class="tab">미리보기 <span class="mono">#{{ case_id }}</span></span>
+  <span class="mut">{{ place or '—' }}{% if case.purpose %} · {{ case.purpose }}{% endif %}</span><span class="grow"></span>
+  {% if receipts|selectattr('file')|list %}<span class="hint">사진 클릭 → 원본 크기</span>{% endif %}
+  <span class="hint"><kbd>j</kbd><kbd>k</kbd> 이동</span><span class="hint"><kbd>↵</kbd> 열기</span>
+  <a class="btn sm" href="/case/{{ case_id }}">판정 열기</a></div>
+<div class="pv-b">
+  <div class="pv-l pv-ph">
+    {% for d in receipts %}{% if d.file %}<a class="shot" href="/uploads/{{ d.file }}" target="_blank" rel="noopener" title="원본 크기로 보기"><img src="/uploads/{{ d.file }}" alt="영수증 사진"></a>
+    {% else %}<figure class="slip"><figcaption>영수증 · 사진 없음 — 텍스트로 올린 원문</figcaption><pre>{{ d.text }}</pre></figure>{% endif %}
+    {% else %}<p class="pv-none">영수증 없음{% if others %} — 올린 문서: {{ others|join(' · ') }}{% endif %}</p>{% endfor %}
+  </div>
+  <div class="pv-r"><dl class="facts">
+    <dt>집행일</dt><dd class="mono">{{ case.date or '—' }}{% if case.time %} {{ case.time }}{% endif %}</dd>
+    <dt>금액</dt><dd><span class="num">{{ case.amount_total|won }}</span><span class="won">원</span></dd>
+    {% if case.category == '출장비' and case.trip %}<dt>출장</dt><dd>{{ '국외' if case.trip.domestic is sameas false else '국내' }} {{ case.trip.destination or '' }}</dd>
+    {% else %}<dt>가맹점</dt><dd>{{ extracted.vendor_name or '—' }}</dd>
+    <dt>참석자</dt><dd>{% if case.attendees %}{{ case.attendees|length }}명 · {{ case.attendees|map(attribute='name')|join(', ') }}{% else %}—{% endif %}</dd>{% endif %}
+    <dt>증빙</dt><dd>{% for d in docs or [] %}{{ d.kind }}{% if d.file %} 사진{% endif %}{% if not loop.last %} · {% endif %}{% else %}—{% endfor %}</dd>
+  </dl></div>
+</div>

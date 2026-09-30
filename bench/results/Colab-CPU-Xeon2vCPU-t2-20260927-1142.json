@@ -1,0 +1,354 @@
+{
+ "host": "Colab-CPU-Xeon2vCPU-t2",
+ "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+ "model": "qwen.gguf",
+ "n": 20,
+ "sec_per_doc": 63.2435,
+ "tg_per_s": 6.182457646468985,
+ "pp_per_s": 15.950033425977637,
+ "field_acc_raw": "104/140 (74%)",
+ "field_acc": "140/140 (100%)",
+ "date": "2026-09-27T11:42",
+ "rows": [
+  {
+   "id": "M01",
+   "seconds": 82.23,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M02",
+   "seconds": 58.78,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M03",
+   "seconds": 60.64,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M04",
+   "seconds": 52.61,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M05",
+   "seconds": 57.28,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M06",
+   "seconds": 61.68,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M07",
+   "seconds": 63.52,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M08",
+   "seconds": 55.08,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M09",
+   "seconds": 63.19,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M10",
+   "seconds": 70.93,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M11",
+   "seconds": 60.54,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M12",
+   "seconds": 67.98,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M13",
+   "seconds": 72.66,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M14",
+   "seconds": 67.38,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M15",
+   "seconds": 57.33,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M16",
+   "seconds": 56.05,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   }
+  },
+  {
+   "id": "M17",
+   "seconds": 61.33,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M18",
+   "seconds": 70.79,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M19",
+   "seconds": 62.58,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 4,
+    "wrong": [
+     "vendor_type",
+     "has_alcohol",
+     "attendees"
+    ]
+   }
+  },
+  {
+   "id": "M20",
+   "seconds": 62.29,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 4,
+    "wrong": [
+     "vendor_type",
+     "has_alcohol",
+     "attendees"
+    ]
+   }
+  }
+ ],
+ "cpu": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+ "threads": 2,
+ "vcpu": 2,
+ "llama_cpp": "b10809 CPU"
+}

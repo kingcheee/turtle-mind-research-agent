@@ -1,0 +1,82 @@
+{% extends "base.html" %}{% block title %}#{{ case_id }} {{ j.verdict if j else '' }} · 연구비 판정관{% endblock %}{% block main %}
+{%- set ext = '<svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5h5v5M9.5 2.5 3 9" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>' -%}
+{%- set place = (case.trip.destination if case.trip and case.trip.destination else extracted.vendor_name) -%}
+{%- set bad_reasons = j.reasons|rejectattr('verdict','equalto','가능')|list if j else [] -%}
+{%- set tag_reasons = bad_reasons or (j.reasons if j else []) -%}
+{%- set open_q = queue if queue and queue.status in ['대기','기한초과'] else none -%}
+<section class="scr" data-screen="case" data-edit="/case/{{ case_id }}/edit"{% if prev_id %} data-prev="/case/{{ prev_id }}"{% endif %}{% if next_id %} data-next="/case/{{ next_id }}"{% endif %}>
+  <div class="bar">
+    <a class="mut lnk" href="/">건 목록</a><span class="mut">/</span><span class="mono strong">#{{ case_id }}</span>
+    <span class="sep"></span>
+    {% if prev_id %}<a class="btn icon" href="/case/{{ prev_id }}" title="이전 건" aria-label="이전 건">‹</a>{% else %}<span class="btn icon off" aria-hidden="true">‹</span>{% endif %}
+    <span class="mono mut">{{ pos }} / {{ total }}</span>
+    {% if next_id %}<a class="btn icon" href="/case/{{ next_id }}" title="다음 건" aria-label="다음 건">›</a>{% else %}<span class="btn icon off" aria-hidden="true">›</span>{% endif %}
+    <span class="hint"><kbd>[</kbd><kbd>]</kbd></span>
+    <span class="sep"></span>
+    <a class="btn" href="/case/{{ case_id }}/edit" id="edit-btn">수정 <kbd>E</kbd></a>
+    <span class="grow"></span>
+    <span class="mut">규칙엔진 판정 — 모델 관여 없음</span>
+  </div>
+  <div class="vwrap">
+    <div class="vm" id="vm">
+      <div class="meta"><span class="mono">#{{ case_id }}</span><span>·</span><span>{{ case.category }}</span><span>·</span><span class="mono">{{ case.date or '—' }}{% if case.time %} {{ case.time }}{% endif %}</span><span>·</span><span><span class="num">{{ case.amount_total|won }}</span><span class="won">원</span></span></div>
+      <h2 class="ttl">{% if case.category=='출장비' %}{{ '국외' if case.trip and case.trip.domestic is sameas false else '국내' if case.trip and case.trip.domestic else '' }} 출장 {{ place or '' }}{% else %}{{ place or '가맹점 미상' }}{% endif %}{% if case.purpose %} · {{ case.purpose }}{% endif %}</h2>
+      {% if j %}
+      {#- 09-29 사용자: PC·폰 같은 틀 — ①영수증 사진 | 큰 판정 ②요건 대조 ③안 되는 이유 ④조항(펼치면 법 원문). ②～④는 접힌 채 시작.
+          사진은 영수증 사진 → 텍스트 영수증(전표 모양) → 다른 문서 사진 → 다른 문서 텍스트(시연 케이스처럼 영수증 줄이 든 회의록) 순.
+          판정·규칙·고시는 E2E가 읽는 속성으로만. -#}
+      {%- set receipts = (docs or [])|selectattr('kind','equalto','영수증')|list -%}
+      {%- set r0 = (receipts|selectattr('file')|first) or (receipts|first) or ((docs or [])|selectattr('file')|first) or ((docs or [])|selectattr('text')|first) -%}
+      {%- set chev = '<svg class="chev" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>' -%}
+      <div class="hero {{ vc }}" data-verdict="{{ j.verdict }}" data-rules="{{ tag_reasons|map(attribute='rule_id')|join(' ') }}" data-notice="{{ j.notice_no or '' }}">
+        <div class="hero-ph">{% if r0 and r0.file %}<a href="/uploads/{{ r0.file }}" target="_blank" rel="noopener" title="원본 크기로 보기"><img src="/uploads/{{ r0.file }}" alt="{{ r0.kind }} 사진"></a>{% if r0.kind != '영수증' %}<span class="cap">{{ r0.kind }}</span>{% endif %}
+          {%- elif r0 %}<figure class="slip"><figcaption>{{ r0.kind }} 원문</figcaption><pre>{{ r0.text }}</pre></figure>
+          {%- else %}<p class="none">영수증 없음</p>{% endif %}</div>
+        <div class="hero-v"><div class="hv {{ vc }}"><i class="sh {{ vc }}"></i>{{ j.verdict }}</div><p class="hm">{{ MEANING[j.verdict] }}</p></div>
+      </div><!--/hero-->
+
+      <details class="panel fold">
+        <summary class="panel-h">{{ chev|safe }}<strong>요건 대조</strong>
+          <div class="rt">{% for m, lab, color in [('+','충족','ok'),('−','위반','bad'),('?','보완','warn'),('·','참고','mut')] %}{% set n = rows|selectattr('mark','equalto',m)|list|length %}{% if n %}<span class="dsum {{ color }}">{{ m }}{{ n }} {{ lab }}</span>{% endif %}{% endfor %}</div></summary>
+        <div class="dcols"><div></div><div>요건 — 조문·규칙 조건</div><div>사실 — 확인된 증빙 값</div><div>결과</div></div>
+        {% for r in rows %}<div class="drow {{ r.cls }}"><div class="mk">{{ r.mark }}</div><div class="req">{{ r.req }}</div><div class="fa">{{ r.fact|mono }}</div><div class="res">{{ r.result }}</div></div>{% endfor %}
+      </details>
+
+      {#- 안 되는 이유 = 걸린 규칙 이름 + 조항 번호 + 필요 조치. 엔진 문구엔 법 원문이 섞여 있어 원문은 아래 조항 칸으로만(기관 지침은 원문이 아니라 설명이라 그대로).
+          09-29: 따로 있던 조치 줄(심판 상태·이의 신청·임시 승인·재판정·보고서 합산)은 이 칸 끝(.why-do)으로 옮겼다. -#}
+      {%- set qline -%}{% if queue %}<span class="qline">심판 <span class="mono">#{{ queue.id }}</span> · {{ queue.kind }} · <b>{{ queue.status }}</b>{% if open_q %} · 기한 <span class="mono">{{ queue.deadline_at|dday }}</span>{% elif queue.decision_note %} · {{ queue.decision_note }}{% endif %}{% if show_admin %} · <a class="ext" href="/admin">행정팀</a>{% endif %}</span>{% endif %}{%- endset -%}
+      <details class="panel fold why">
+        {% if j.verdict == '가능' %}<summary class="panel-h">{{ chev|safe }}<strong>판정 근거</strong><span class="mut">{{ j.reasons|map(attribute='rule_id')|map('rule_label')|unique|join(' · ') }}</span></summary>
+        <div class="why-b">{% for r in j.reasons %}<p>{{ r.text|unrule }}</p>{% endfor %}
+          <div class="why-do"><span class="okline"><i class="sh ok"></i>사용실적보고서에 합산됨</span><span class="mut">연구활동비 현금 사용금액</span>{{ qline }}</div>
+        </div>
+        {% else %}<summary class="panel-h">{{ chev|safe }}<strong>안 되는 이유</strong><span class="why-s {{ vc }}">{{ bad_reasons|map(attribute='rule_id')|map('rule_label')|unique|join(' · ') }}</span></summary>
+        <div class="why-b">
+          <ul class="why-l">{% for r in bad_reasons %}<li><i class="sh {{ r.verdict|vc }}"></i><b>{{ rule_label(r.rule_id) }}</b><span class="mut">{{ r.article }}</span>{% if not (r.article or '').startswith('제') %}<p>{{ r.text|unrule }}</p>{% endif %}</li>{% endfor %}</ul>
+          <div class="why-a"><span class="lab">필요 조치</span>{% for a in j.required_actions %}<span>{{ a }}</span>{% else %}<span class="mut">없음 — {{ '자체 회계감사 의견서 부적정 내역에 들어갑니다' if j.verdict == '불가' else '자료를 보완해 재판정' }}</span>{% endfor %}</div>
+          <div class="why-do">{{ qline }}
+            {%- if j.verdict == '보완' %}<a class="btn pri" href="/case/{{ case_id }}/edit">자료 보완 후 재판정</a>
+              {%- if show_admin and not open_q %}<form class="inline" method="post" action="/case/{{ case_id }}/approve"><button class="btn" type="submit">임시 승인 — 먼저 집행, 7일 내 심판</button></form>{% endif %}
+            {%- elif show_admin and not open_q %}<form class="inline" method="post" action="/case/{{ case_id }}/appeal"><span class="val"><input type="text" name="statement" placeholder="소명 — 예: 외부 자문위원이 실제로 참석" aria-label="소명"></span><button class="btn" type="submit">이의 신청</button></form>{% endif -%}
+          </div>
+        </div>{% endif %}
+      </details>
+
+      {% for p in panels %}
+      <details class="panel fold stt" data-cite="{{ p.cite }}">
+        <summary class="panel-h">{{ chev|safe }}<span class="lab">조항</span><strong>{{ p.article }}</strong>{% if p.inst %}<span class="mut">{{ p.source_kind }}</span>{% endif %}</summary>
+        <div class="stt-m">{% if p.reviewed %}검토한 조문 · {% endif %}{{ p.title }}
+          {%- if p.inst %}<span class="mut"> · {{ p.source_kind }} · 고시 조문 아님{% if p.source_kind=='기관 지침' %} — 보완까지만{% endif %}</span>
+          {%- else %}{% if p.notice %}<span> · 과기정통부 고시 {{ p.notice|mono }}</span>{% endif %}{% if p.eff %}<span class="mut mono"> {{ p.eff }}</span>{% endif %}{% if p.url %} <a class="ext" href="{{ p.url }}" target="_blank" rel="noopener">law.go.kr{{ ext|safe }}</a>{% endif %}{% endif %}</div>
+        {% if p.timeline %}<div class="stt-note" hidden>참고 — 이 건의 기준일 <span class="mono">{{ case.date }}</span>에는 적용되지 않는 구간의 원문</div>{% endif %}
+        <div class="stt-b"><div class="gut">원문</div><blockquote>「{{ p.quote }}」</blockquote></div>
+        {% if p.timeline %}<div class="tl">{% for t in p.timeline %}<button type="button" data-code="{{ t.code }}" class="{{ 'applied view' if t.applied }}"><b>{{ t.label }}</b><span class="mono">{{ t.period }}</span>{% if t.applied %}<span class="pin">기준일 <span class="mono">{{ case.date }}</span> 적용</span>{% endif %}<template>「{{ t.quote }}」</template></button>{% endfor %}</div>
+        {% elif not p.inst %}<div class="stt-f"><span>적용 고시 {{ (j.notice_no or '—')|mono }}</span><span>·</span><span>기준일 = 집행일 <span class="mono">{{ case.date or '—' }}</span></span></div>{% endif %}
+      </details>
+      {% endfor %}
+
+      {% else %}<p class="mut">판정 기록 없음</p>{% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

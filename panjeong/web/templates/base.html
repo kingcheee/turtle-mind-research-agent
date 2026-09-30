@@ -1,0 +1,47 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>{% block title %}연구비 판정관{% endblock %}</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,">
+<link rel="stylesheet" href="/static/app.css?v={{ asset_v }}"><script src="/static/htmx.min.js"></script><script src="/static/app.js?v={{ asset_v }}"></script></head>
+<body>
+<div class="app">
+<header class="tb">
+  <a class="brand" href="/">연구비 판정관</a>
+  <div class="crumb">{% if project %}<span class="mono">{{ project['연구개발과제번호'] }}</span><span>·</span><span>{{ project['기관명'] }}</span>{% endif %}</div>
+  <form class="cmd" action="/" method="get" role="search">
+    <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <input id="q" name="q" type="text" value="{{ q or '' }}" placeholder="건 ID · 가맹점 · 조문 검색" autocomplete="off" spellcheck="false" aria-label="검색">
+    <kbd>⌘K</kbd>
+  </form>
+  <div class="who">{% if project %}연구책임자 {{ project['연구책임자'] }}{% endif %}</div>
+</header>
+
+<aside class="sd">
+  <nav class="nav">
+    <a href="/" class="{{ 'on' if tab=='list' }}">건 목록<span class="cnt">{{ nav.cases if nav else '' }}</span></a>
+    <a href="/new" class="{{ 'on' if tab=='new' }}">새 증빙<kbd>N</kbd></a>
+    {% if show_admin %}<a href="/admin" class="{{ 'on' if tab=='admin' }}">행정팀 · 심판 큐{% if nav and nav.overdue %}<span class="cnt over">{{ nav.overdue }}</span>{% elif nav %}<span class="cnt">{{ nav.queue }}</span>{% endif %}</a>{% endif %}
+    <a href="/reports" class="{{ 'on' if tab=='reports' }}">보고서</a>
+    <div class="tree">{% for f in FORMS %}<a href="/reports/{{ f.key }}.hwpx">{{ f.short }}</a>{% endfor %}</div>
+    <a href="/bench" class="{{ 'on' if tab=='bench' }}">실측</a>
+  </nav>
+  <div>
+    <h4>적용 기준</h4>
+    <dl class="kv">
+      <dt>현행</dt><dd>{{ current.notice_no|mono }}</dd>
+      <dt>시행</dt><dd class="mono">{{ current.start }}</dd>
+      <dt>기준</dt><dd>기준일 = 집행일</dd>
+    </dl>
+  </div>
+</aside>
+
+<main class="mn" id="mn">{% block main %}{% endblock %}</main>
+
+<footer class="st">
+  {% if llama_ok %}<span class="it"><i class="dot"></i>온디바이스 모델 연결됨</span>{% elif llama_ok is none %}<span class="it"><i class="dot off"></i>모델 상태 확인 안 됨</span>{% else %}<span class="it"><i class="dot off"></i>모델 꺼짐</span>{% endif %}
+  <span class="it mono">Qwen2.5-1.5B · llama.cpp · Tesseract</span>
+  <span class="it">규칙엔진 · {{ current.notice_no|mono }}</span>
+  <span class="grow"></span>
+  {% if bench_now %}<span class="it">추출 실측 문서당 <span class="mono">{{ '%.1f'|format(bench_now.sec_per_doc) }}초 · {{ '%.0f'|format(bench_now.tg_per_s) }} tok/s</span></span>{% endif %}
+  {% if counts is defined %}<span class="it">건 <span class="mono">{{ nav.cases }}</span> · 가능 <span class="mono">{{ counts['가능'] }}</span> · 보완 <span class="mono">{{ counts['보완'] }}</span> · 불가 <span class="mono">{{ counts['불가'] }}</span></span>{% endif %}
+</footer>
+</div>
+</body></html>
