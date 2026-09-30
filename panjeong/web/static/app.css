@@ -237,6 +237,10 @@ table.g{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;
 .up-row{display:flex;align-items:center;gap:18px;padding:12px 16px}
 .demo-ph{display:flex;align-items:center;gap:12px;padding:0 16px 12px}
 .demo-ph img{height:120px;border:1px solid var(--line);border-radius:4px;background:#fff}
+/* 올린 사진은 크게 — 화면 높이의 절반 넘게(10-01 사용자 「최소 화면의 절반」). 여러 장이면 옆으로 넘긴다 */
+.file-ph{overflow-x:auto}
+.file-ph img{flex:none;height:55vh}
+@media (min-width:901px){.up-l:has(.file-ph:not([hidden])) textarea{min-height:96px}}   /* 한 화면 틀일 때만 — 폰은 쌓여서 스크롤 */
 .file{display:inline-flex;align-items:center;gap:10px;cursor:pointer}
 .file input{position:absolute;opacity:0;width:1px;height:1px}
 .file input:focus-visible + .btn{box-shadow:0 0 0 1px var(--acc)}
@@ -550,7 +554,7 @@ form.inline .val{width:300px;height:28px}
 .hero-ph .slip figcaption{padding:7px 14px;font-size:13px;color:var(--ink-3);border-bottom:1px dashed var(--line)}
 .hero-ph .slip pre{flex:1;margin:0;padding:10px 14px;max-height:400px;overflow:auto;font:400 15px/1.6 var(--sans);color:var(--ink);white-space:pre-wrap;word-break:keep-all}
 .hero-ph .none{margin:0;padding:0 12px;font-size:16px;color:var(--ink-3);text-align:center}
-.hero-v{display:flex;flex-direction:column;justify-content:center;gap:14px;padding:22px 26px;border:1px solid var(--line);border-radius:4px}
+.hero-v{display:flex;flex-direction:column;align-items:center;justify-content:center;align-self:center;justify-self:center;max-width:100%;gap:14px;padding:22px 26px;border:1px solid var(--line);border-radius:4px;text-align:center}
 .hero.ok .hero-v{background:var(--ok-bg);border-color:var(--ok-line)}
 .hero.warn .hero-v{background:var(--warn-bg);border-color:var(--warn-line)}
 .hero.bad .hero-v{background:var(--bad-bg);border-color:var(--bad-line)}
@@ -558,7 +562,7 @@ form.inline .val{width:300px;height:28px}
 .hv.ok{color:var(--ok)} .hv.warn{color:var(--warn)} .hv.bad{color:var(--bad)}
 .hv .sh{width:20px;height:20px}
 .hv .sh.warn{width:24px;height:21px}
-.hm{font-size:18px;line-height:1.45;color:var(--ink-2);word-break:keep-all}
+.hm{font-size:18px;line-height:1.45;color:var(--ink-2);word-break:keep-all;text-wrap:balance}
 .fold{margin-top:8px}
 .hero + .fold{margin-top:14px}
 .fold > summary{min-height:44px}

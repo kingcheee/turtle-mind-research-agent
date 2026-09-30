@@ -16,8 +16,9 @@
             <label class="file"><input type="file" name="files" multiple accept="image/*" id="files"><span class="btn">파일 고르기</span><span class="mut" id="file-n">선택한 파일 없음</span></label>
             <label class="lbl">문서 종류 <select class="val sel" name="file_doc_type">{% for k in DOC_KINDS %}<option>{{ k }}</option>{% endfor %}</select></label>
           </div>
+          <div class="demo-ph file-ph" id="file-ph" hidden></div>
           <input type="hidden" name="demo_photo" id="demo_photo">
-          <div class="demo-ph" id="demo-ph" hidden><img alt="시연 영수증 사진"><span class="mut">시연 영수증 사진 · Gemini 합성</span><button type="button" class="btn sm" id="demo-ph-x">빼기</button></div>
+          <div class="demo-ph" id="demo-ph" hidden><img alt="예시 영수증 사진"><span class="mut">예시 영수증 사진</span><button type="button" class="btn sm" id="demo-ph-x">빼기</button></div>
         </div>
         <div class="sec grow-sec">
           <div class="sec-h"><strong>텍스트</strong><span>회의록·출장 문서·영수증 내용 붙여 넣기</span><span class="grow"></span>
@@ -25,22 +26,21 @@
           <textarea name="text_doc" id="text_doc" spellcheck="false" placeholder="2026-06-12 과제 중간점검 회의. 참석: 김철수(한국전자통신연구원), 박민수(KAIST) …"></textarea>
         </div>
       </div>
-      <div class="sp sp-x" data-t="next" title="끌어서 크기 조절"></div>
+      {% if show_demo %}<div class="sp sp-x" data-t="next" title="끌어서 크기 조절"></div>
       <div class="up-r">
-        <div class="sec-h"><strong>시연 케이스</strong><span class="mono">{{ demo|length }}</span><span class="grow"></span><span class="mut">누르면 영수증 사진·텍스트가 채워짐</span></div>
+        <div class="sec-h"><strong>예시 영수증/회의록</strong><span class="mono">{{ demo|length }}</span><span class="grow"></span><span class="mut">누르면 영수증 사진·텍스트가 채워짐</span></div>
         <table class="g demo" id="demo">
-          <colgroup><col style="width:44px"><col style="width:78px"><col><col style="width:108px"></colgroup>
-          <thead><tr><th>#</th><th>예상</th><th>사례</th><th>문서</th></tr></thead>
+          <colgroup><col style="width:44px"><col><col style="width:120px"></colgroup>
+          <thead><tr><th>#</th><th>사례</th><th>문서</th></tr></thead>
           <tbody>
-          {% for v, label, kind, text in demo %}<tr class="r" data-kind="{{ kind }}" data-photo="{{ demo_photos.get(loop.index, '') }}" data-text="{{ text }}" tabindex="0">
+          {% for no, (v, label, kind, text) in demo %}<tr class="r" data-kind="{{ kind }}" data-photo="{{ demo_photos.get(no, '') }}" data-text="{{ text }}" tabindex="0">
             <td class="id">{{ loop.index }}</td>
-            <td><span class="vd {{ v|vc }}"><i class="sh {{ v|vc }}"></i>{{ v }}</span></td>
             <td class="demo-t">{{ label }}</td>
-            <td class="mut">{{ '사진 + ' if demo_photos.get(loop.index) }}{{ kind }}</td>
+            <td class="mut">{{ '사진 + ' if demo_photos.get(no) }}{{ kind }}</td>
           </tr>{% endfor %}
           </tbody>
         </table>
-      </div>
+      </div>{% endif %}
     </div>
     <div class="ab">
       <span class="mut" id="up-sum">문서 없음</span>

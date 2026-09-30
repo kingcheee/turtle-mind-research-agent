@@ -7,7 +7,7 @@ from fastapi.testclient import TestClient
 
 from panjeong.rules.statutes import CITATIONS
 from panjeong.store import Store
-from panjeong.web.app import DEMO, create_app
+from panjeong.web.app import DEMO, DEMO_ALL, create_app
 from tests.test_web import EXTRACTED, fake_extractor, judge_form
 
 EXTERNAL = [{"name": "김철수", "affiliation": "ETRI", "external": False},
@@ -68,7 +68,9 @@ def test_static_assets_carry_a_version_so_edits_show_on_reload(client):
 def test_new_page_has_upload_form_and_demo_cases(client):
     r = client.get("/new").text
     assert 'hx-post="/extract"' in r and 'name="files"' in r and 'name="text_doc"' in r
-    assert r.count('data-kind="') == len(DEMO) == 6
+    assert r.count('data-kind="') == len(DEMO) == 5 and "영수증:" not in r   # 10-01: 5개, 영수증은 사진으로만
+    assert client.get("/new?demo=all").text.count('data-kind="') == len(DEMO_ALL) == 11   # E2E·영상 컷용 전체
+    assert "예시 영수증/회의록" in r and "<th>예상</th>" not in r and "시연 케이스" not in r
     assert "참여연구자만 회의 식비" in r
 
 
@@ -76,7 +78,9 @@ def test_demo_rows_carry_the_gemini_receipt_photos(client):
     """09-29 사용자: 사이트가 사용자가 Gemini로 만든 영수증 사진을 직접 쓰게 — 시연 1·2·3·4·6번 행에 그 사진이 붙는다(5번 출장은 사진 없음)."""
     r = client.get("/new").text
     photos = re.findall(r'<tr class="r" data-kind="[^"]*" data-photo="([^"]*)"', r)
-    assert photos == ["R1.jpg", "R2.jpg", "R3.jpg", "R4.jpg", "", "R6.jpg"]
+    assert photos == ["R1.jpg", "R3.jpg", "R4.jpg", "R8.jpg", "R9.jpg"]
+    all_photos = re.findall(r'<tr class="r" data-kind="[^"]*" data-photo="([^"]*)"', client.get("/new?demo=all").text)
+    assert all_photos == ["R1.jpg", "R2.jpg", "R3.jpg", "R4.jpg", "", "R6.jpg", "R7.jpg", "R8.jpg", "R9.jpg", "R13.jpg", "R15.jpg"]
     assert 'name="demo_photo"' in r and 'id="demo-ph"' in r
     img = client.get("/demo-photos/R1.jpg")
     assert img.status_code == 200 and img.headers["content-type"] == "image/jpeg" and len(img.content) > 100_000

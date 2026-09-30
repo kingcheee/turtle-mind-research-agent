@@ -44,8 +44,8 @@ FORMS = [
      "what": "집행일·비목·업체·금액·판정·조문·기준일·심판"},
 ]
 
-# 시연 케이스 6개 — 문구는 09-24 index.html DEMO 그대로, 문장 사이만 줄바꿈(원문 뷰어 줄번호가 뜻을 갖게).
-DEMO = [
+# 예시 영수증/회의록 전체 11개(옛 「시연 케이스」, E2E·영상 컷은 `/new?demo=all`로 이 순서 그대로) — 1~6 문구는 09-24 index.html DEMO 그대로, 문장 사이만 줄바꿈(원문 뷰어 줄번호가 뜻을 갖게).
+DEMO_ALL = [
     ("가능", "외부 참석 회의", "회의록",
      "2026-06-12 12:00~13:30 과제 중간점검 회의(장소: 한식당 미가).\n참석: 김철수(한국전자통신연구원), 이영희(한국전자통신연구원), "
      "박민수(KAIST 교수), 정수진(한국전자통신연구원).\n영수증: 한식당 미가 2026-06-12 12:40 된장찌개 4 x 12,000 공기밥 4 x 1,200 "
@@ -65,7 +65,31 @@ DEMO = [
     ("가능", "같은 기관 과제 미참여자 참석 (제2026-38호 완화)", "회의록",
      "2026-06-12 12:00 과제 점검 회의(장소: 한식당 미가).\n참석: 김철수(한국전자통신연구원), 이영희(한국전자통신연구원), "
      "최민호(한국전자통신연구원 행정팀, 과제 미참여).\n영수증: 한식당 미가 2026-06-12 12:40 된장찌개 3 x 12,000 합계 36,000원(부가세 포함)"),
+    # 10-01 사용자: 아직 안 들어간 Gemini 영수증(R7·R8·R9·R13·R15, cases.json demo 7~11)도 누르면 사진·회의록이 채워지게.
+    ("가능", "중식 점심 — 외부 2명 참석", "회의록",
+     "2026-06-16 12:00~13:30 과제 협력 방향 논의 회의(장소: 중화요리 홍보각).\n참석: 김철수(한국전자통신연구원), 이영희(한국전자통신연구원), "
+     "정수진(한국전자통신연구원), 이준호(서울대학교 부교수), 한지원(KAIST 박사과정).\n영수증: 중화요리 홍보각 2026-06-16 12:30 짜장면 3 x 8,000 "
+     "짬뽕 2 x 9,000 탕수육(중) 1 x 28,000 합계 70,000원(부가세 포함)"),
+    ("가능", "카페 — 내부결재 + 외부 자문", "내부결재문서",
+     "[내부결재] 제목: 외부 자문 회의 개최 및 회의비 집행\n기안: 이영희(한국전자통신연구원)\n회의일시: 2026-06-17 15:00~16:30  장소: 카페 모모\n"
+     "참석: 이영희(한국전자통신연구원), 정수진(한국전자통신연구원), 박민수(KAIST 교수)\n결재일: 2026-06-16\n"
+     "영수증: 카페 모모 2026-06-17 15:20 아메리카노 2 x 4,500 카페라떼 1 x 5,500 딸기케이크 1 x 7,500 합계 22,000원(부가세 포함)"),
+    ("보완", "한우 — 1인당 4만 2천 원", "회의록",
+     "2026-06-18 12:20~13:50 실증 기관 요구사항 검토 회의(장소: 한우마을 다래).\n참석: 김철수(한국전자통신연구원), 이영희(한국전자통신연구원), "
+     "박민수(KAIST 교수), 이준호(서울대학교 부교수).\n영수증: 한우마을 다래 2026-06-18 12:50 한우 갈비탕 4 x 18,000 한우 육회 1 x 38,000 "
+     "한우 모둠구이(소) 1 x 58,000 합계 168,000원(부가세 포함)"),
+    ("가능", "점심 회의 — 외부 교수 참석", "회의록",
+     "2026-06-22 12:30~14:00 과제 진도 점검 회의(장소: 한식당 소반).\n참석: 김철수(한국전자통신연구원), 이영희(한국전자통신연구원), "
+     "박민수(KAIST 교수).\n영수증: 한식당 소반 2026-06-22 12:40 불고기 정식 3 x 13,000 합계 39,000원(부가세 포함)"),
+    ("가능", "연구혁신비 — 참여연구자만", "회의록",
+     "2026-06-24 12:20~13:20 과제 연구혁신 워크숍 준비 회의(장소: 샐러드랩). 비목: 연구혁신비.\n참석: 김철수(한국전자통신연구원), "
+     "이영희(한국전자통신연구원), 정수진(한국전자통신연구원).\n영수증: 샐러드랩 2026-06-24 12:40 샐러드 파스타 3 x 13,000 합계 39,000원(부가세 포함)"),
 ]
+# 10-01 사용자: 화면에는 5개만, 텍스트에서 「영수증: …」 줄을 뺀다 — 영수증은 사진 OCR로만. 실제 모델로 10행을 사진만으로 돌려
+# 8행이 판정·금액·날짜 정답과 같았고(10·11번은 OCR이 합계를 못 읽음) 그중 가능 2·보완 2·불가 1을 골랐다.
+DEMO_NOS = [1, 3, 4, 8, 9]
+DEMO = [(v, label, kind, "\n".join(l for l in text.split("\n") if not l.startswith("영수증:")))
+        for v, label, kind, text in (DEMO_ALL[i - 1] for i in DEMO_NOS)]
 DOC_KINDS = ["영수증", "회의록", "내부결재문서", "출장신청서", "출장결과보고서", "기타"]
 
 
@@ -161,6 +185,9 @@ def _latest_bench(results: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     return max(mine, key=lambda r: str(r.get("date", ""))) if mine else None
 
 
+UPLOAD_MAX = 10 * 1024 * 1024  # 올린 사진 한 장 상한
+
+
 def create_app(store: Optional[Store] = None, extractor: Optional[Extractor] = None,
                data_dir: Path | str = "data", llama_url: str = "http://127.0.0.1:8097",
                forms_dir: Optional[Path | str] = None, photos_dir: Optional[Path | str] = None) -> FastAPI:
@@ -176,6 +203,8 @@ def create_app(store: Optional[Store] = None, extractor: Optional[Extractor] = N
     # 행정팀(선집행·사후심판) 축 표시 스위치 — project.json에 "행정팀": false 면 내비·임시 승인·이의 신청을 숨긴다.
     # 라우트·저장소·테스트는 그대로다(숨김이지 삭제가 아님). 기본은 켜짐(기획서의 선집행·사후심판 축, 시연 시나리오 3).
     show_admin = bool(project.get("행정팀", True))
+    # 시연 케이스 표 스위치 — "시연 케이스": false 면 /new 오른쪽 표를 숨긴다(10-01 발표 영상: 실제 사용자가 사진을 올리는 화면으로 찍기 위해).
+    show_demo = bool(project.get("시연 케이스", True))
     # 09-29 사용자: 시연 케이스가 사용자가 Gemini로 만든 영수증 사진을 직접 쓰게 — cases.json의 demo 번호 → 사진 이름.
     # /demo-photos/와 /extract의 demo_photo는 이 이름들만 받는다(폴더의 다른 파일·경로 조작은 404·무시).
     photos_dir = Path(photos_dir) if photos_dir else HERE.parent.parent / "data" / "photos"
@@ -227,6 +256,7 @@ def create_app(store: Optional[Store] = None, extractor: Optional[Extractor] = N
     def render(name: str, request: Request, **ctx):
         ctx.setdefault("request", request)
         ctx.setdefault("show_admin", show_admin)
+        ctx.setdefault("show_demo", show_demo)
         # 브라우저가 app.css·app.js를 캐시해 고친 게 안 보였다(09-28) — 수정 시각을 쿼리로 붙인다
         ctx.setdefault("asset_v", int(max((HERE / "static" / f).stat().st_mtime for f in ("app.css", "app.js"))))
         if "tab" in ctx:
@@ -262,7 +292,8 @@ def create_app(store: Optional[Store] = None, extractor: Optional[Extractor] = N
 
     @app.get("/new", response_class=HTMLResponse)
     def new(request: Request):
-        return render("new.html", request, tab="new", demo=DEMO, demo_photos=demo_photos)
+        rows = list(enumerate(DEMO_ALL, 1)) if request.query_params.get("demo") == "all" else list(zip(DEMO_NOS, DEMO))
+        return render("new.html", request, tab="new", demo=rows, demo_photos=demo_photos)
 
     @app.get("/demo-photos/{name}")
     def demo_photo(name: str):
@@ -273,6 +304,10 @@ def create_app(store: Optional[Store] = None, extractor: Optional[Extractor] = N
     @app.post("/extract", response_class=HTMLResponse)
     async def extract(request: Request):
         form = await request.form()
+        # 공개 시연(Funnel) 방어 — 파일당 10MB 넘는 사진은 저장·OCR 전에 거절한다
+        if any(isinstance(up, StarletteUploadFile) and (up.size or 0) > UPLOAD_MAX for up in form.getlist("files")):
+            return HTMLResponse('<div class="bar"><h1>새 증빙</h1><span class="sep"></span>'
+                                '<span class="vd warn"><i class="sh warn"></i>사진이 너무 크다 — 파일당 10MB까지 올릴 수 있다</span></div>')
         docs: List[Dict[str, Any]] = []
         demo_name = str(form.get("demo_photo") or "")
         if demo_name in demo_photo_names:  # 시연 행의 Gemini 영수증 사진 — 올린 사진과 똑같이 uploads로 복사해 OCR

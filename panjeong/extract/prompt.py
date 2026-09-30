@@ -96,6 +96,10 @@ _AMOUNT = re.compile(r"(\d{1,3}(?:,\d{3})+|\d{4,})\s*원")
 _MEAL = re.compile(r"(식사|점심|저녁|조식|중식|석식|식대)\s*(를|을)?\s*제공")
 
 
+_TEXT_DATE = re.compile(r"(?<!\d)(\d{4})[-./](\d{1,2})[-./](\d{1,2})(?!\d)")
+_VENUE = re.compile(r"장소\s*[:：]\s*([^()/,\n]+)")
+
+
 def _nullish(v: Any) -> bool:
     return v is None or (isinstance(v, str) and v.strip().lower() in ("", "none", "null", "미상", "불명"))
 
@@ -104,6 +108,8 @@ def refine_with_text(extracted: Dict[str, Any], text: str) -> Dict[str, Any]:
     """모델의 범주 판단 중 문서 텍스트로 확정할 수 있는 것은 코드가 덮어쓴다(판정은 코드).
     - has_alcohol: 주류·주점 키워드가 있으면 True, 없으면 False (모델 값은 쓰지 않는다)
     - vendor_type: 품목·문서 키워드(VENDOR_KEYWORDS)가 있으면 그것, 없으면 모델 값(단 「주점」은 주류 키워드 없으면 「식당」)
+    - vendor_name: 회의록 「장소: X」가 영수증 원문에도 있으면 X(두 문서 일치)
+    - date: 모델 날짜가 원문에 없고 월·일이 같은 원문 날짜가 하나뿐이면 그 날짜(OCR 연도 오독)
     - amount_total: 「합계 N원」이 있으면 그 값. 없고 모델 값이 없거나 비현실적(<1,000)이면 「N원」 합산
     - trip: 기간(YYYY-MM-DD ~ YYYY-MM-DD)·출장지·국내/국외·식사 제공을 텍스트에서 채운다. 집행일이 비면 출장 시작일"""
     out = dict(extracted)
@@ -126,6 +132,26 @@ def refine_with_text(extracted: Dict[str, Any], text: str) -> Dict[str, Any]:
             cut = re.search(re.escape(v) + r"[가-힣A-Za-z0-9]+", text)
             if cut:
                 out["vendor_name"] = cut.group(0)
+
+    # 회의록의 「장소: X」가 영수증 원문에도 찍혀 있으면(공백 무시) 두 문서가 맞춰 준 상호다 — 그걸 쓴다.
+    # 사진 OCR에서 모델이 「대표 김미가」(→「대총김미가」)나 「sz. 금액」 줄을 상호로 뽑았다(10-01). 영수증에 없으면 모델 값 그대로.
+    venue = _VENUE.search(text)
+    if venue:
+        x = venue.group(1).strip()
+        flat = lambda s: re.sub(r"\s+", "", s or "")
+        if x and flat(text).count(flat(x)) >= 2 and flat(out.get("vendor_name")) != flat(x):
+            out["vendor_name"] = x
+
+    # 모델 날짜가 원문 어디에도 없고, 월·일이 같은 원문 날짜가 딱 하나면 연도 오독이다 — 그 날짜를 쓴다.
+    # 사진 OCR 「20226-06-16」을 모델이 2022-06-16으로 냈고 회의록엔 2026-06-16이 있었다(10-01).
+    d0 = out.get("date")
+    if isinstance(d0, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", d0.strip()):
+        d0 = d0.strip()
+        seen = {f"{y}-{int(mo):02d}-{int(dd):02d}" for y, mo, dd in _TEXT_DATE.findall(text)}
+        if d0 not in seen:
+            same = {s for s in seen if s[5:] == d0[5:]}
+            if len(same) == 1:
+                out["date"] = same.pop()
 
     m = _TOTAL.search(text)
     if m:

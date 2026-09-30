@@ -1,0 +1,332 @@
+{
+ "host": "S21-Exynos2100-t4",
+ "platform": "Android 15 · Termux · llama.cpp (Termux llama-cpp 0.5.0) · taskset 4-7 -t 4 · 노트북에서 ssh 터널",
+ "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+ "n": 20,
+ "sec_per_doc": 56.6275,
+ "tg_per_s": 7.768992491024403,
+ "pp_per_s": 14.272719651880777,
+ "field_acc_raw": "109/140 (78%)",
+ "field_acc": "140/140 (100%)",
+ "date": "2026-10-01T00:21",
+ "note": "1차 M01～M10 후 ssh 터널 끊김 → M11～M20 이어 잼(재시도 0회). 측정 중 빅코어 클럭 1.25GHz(최대 2.8) 관측 — 스로틀 상태 포함. 충전 여부 미확인. M11(19.8초)은 끊기기 직전 폰이 같은 프롬프트를 이미 처리해 캐시가 맞은 값 — 제외 평균 sec_per_doc_excl_M11.",
+ "rows": [
+  {
+   "id": "M01",
+   "seconds": 61.0,
+   "score": {
+    "correct": 7,
+    "total": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "correct": 5,
+    "total": 7
+   },
+   "run": 1
+  },
+  {
+   "id": "M02",
+   "seconds": 60.3,
+   "score": {
+    "correct": 7,
+    "total": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "correct": 6,
+    "total": 7
+   },
+   "run": 1
+  },
+  {
+   "id": "M03",
+   "seconds": 65.8,
+   "score": {
+    "correct": 7,
+    "total": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "correct": 6,
+    "total": 7
+   },
+   "run": 1
+  },
+  {
+   "id": "M04",
+   "seconds": 44.1,
+   "score": {
+    "correct": 7,
+    "total": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "correct": 5,
+    "total": 7
+   },
+   "run": 1
+  },
+  {
+   "id": "M05",
+   "seconds": 57.0,
+   "score": {
+    "correct": 7,
+    "total": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "correct": 6,
+    "total": 7
+   },
+   "run": 1
+  },
+  {
+   "id": "M06",
+   "seconds": 70.8,
+   "score": {
+    "correct": 7,
+    "total": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "correct": 5,
+    "total": 7
+   },
+   "run": 1
+  },
+  {
+   "id": "M07",
+   "seconds": 61.1,
+   "score": {
+    "correct": 7,
+    "total": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "correct": 6,
+    "total": 7
+   },
+   "run": 1
+  },
+  {
+   "id": "M08",
+   "seconds": 50.6,
+   "score": {
+    "correct": 7,
+    "total": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "correct": 6,
+    "total": 7
+   },
+   "run": 1
+  },
+  {
+   "id": "M09",
+   "seconds": 59.8,
+   "score": {
+    "correct": 7,
+    "total": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "correct": 5,
+    "total": 7
+   },
+   "run": 1
+  },
+  {
+   "id": "M10",
+   "seconds": 69.9,
+   "score": {
+    "correct": 7,
+    "total": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "correct": 5,
+    "total": 7
+   },
+   "run": 1
+  },
+  {
+   "id": "M11",
+   "seconds": 19.83,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   },
+   "run": 2
+  },
+  {
+   "id": "M12",
+   "seconds": 45.65,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   },
+   "run": 2
+  },
+  {
+   "id": "M13",
+   "seconds": 55.49,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   },
+   "run": 2
+  },
+  {
+   "id": "M14",
+   "seconds": 61.59,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   },
+   "run": 2
+  },
+  {
+   "id": "M15",
+   "seconds": 51.33,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   },
+   "run": 2
+  },
+  {
+   "id": "M16",
+   "seconds": 61.01,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   },
+   "run": 2
+  },
+  {
+   "id": "M17",
+   "seconds": 55.38,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 6,
+    "wrong": [
+     "vendor_type"
+    ]
+   },
+   "run": 2
+  },
+  {
+   "id": "M18",
+   "seconds": 66.89,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "attendees"
+    ]
+   },
+   "run": 2
+  },
+  {
+   "id": "M19",
+   "seconds": 57.32,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "has_alcohol"
+    ]
+   },
+   "run": 2
+  },
+  {
+   "id": "M20",
+   "seconds": 57.66,
+   "score": {
+    "total": 7,
+    "correct": 7,
+    "wrong": []
+   },
+   "score_raw": {
+    "total": 7,
+    "correct": 5,
+    "wrong": [
+     "vendor_type",
+     "has_alcohol"
+    ]
+   },
+   "run": 2
+  }
+ ],
+ "sec_per_doc_excl_M11": 58.56
+}

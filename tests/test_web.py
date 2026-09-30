@@ -98,3 +98,11 @@ def test_queue_detail_offers_rule_ids_of_the_judgment_for_exception_registration
     r = client.get("/admin/queue/1")
     assert r.status_code == 200
     assert 'value="M-25-4-EXT" selected' in r.text   # 첫 규칙이 기본 선택 — 「(없음)」이 기본이면 등록을 빼먹는다
+
+
+def test_extract_rejects_upload_over_10mb(client, tmp_path):
+    """공개 시연(Funnel) 방어 — 파일당 10MB 넘는 사진은 저장·OCR 전에 거절한다."""
+    big = b"\0" * (10 * 1024 * 1024 + 1)
+    r = client.post("/extract", files={"files": ("big.jpg", big, "image/jpeg")})
+    assert r.status_code == 200 and "10MB" in r.text
+    assert not any((tmp_path / "uploads").iterdir())

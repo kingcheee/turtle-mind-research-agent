@@ -30,7 +30,7 @@ const W = +(process.env.PJ_W || 1440), H = +(process.env.PJ_H || 900);
   // 1 빈 목록
   await page.goto(B + '/'); await check('list_empty', '40-list-empty');
   // 2 올리기 → 시연 행 → ⌘↵
-  await page.goto(B + '/new'); await check('new', '41-new');
+  await page.goto(B + '/new?demo=all'); await check('new', '41-new');
   await page.click(`#demo tbody tr:nth-child(${DEMO})`);
   out.new_text = (await page.inputValue('#text_doc')).slice(0, 40);
   out.new_sum = await page.textContent('#up-sum');

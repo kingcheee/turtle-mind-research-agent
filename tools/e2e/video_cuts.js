@@ -14,7 +14,7 @@ const S = process.argv[2] || '.';
   const shot = name => page.screenshot({ path: `${S}/${name}.png` });
   const open = async sel => { await page.click(`${sel} > summary`); await page.waitForTimeout(250); };   // 펼침 애니메이션 0.12초
   async function extract(n) {
-    await page.goto(B + '/new');
+    await page.goto(B + '/new?demo=all');
     await page.click(`#demo tbody tr:nth-child(${n})`);
     return page;
   }

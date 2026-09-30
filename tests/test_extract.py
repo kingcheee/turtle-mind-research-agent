@@ -129,6 +129,49 @@ def test_refine_keeps_model_vendor_type_when_no_keyword():
     assert refine_with_text({"vendor_type": None}, "알 수 없는 업체 합계 10,000원")["vendor_type"] is None
 
 
+# 10-01 실측 OCR(Gemini 사진 R1 1200px) — 2행 「대표 김미가」가 「대총김미가」로 읽혀 모델이 그걸 상호로 뽑았다
+R1_OCR = ("한식당미가\n사업자번호 123-45-67890 대총김미가\n대전유성구가상로 12\n[ 카드영수증 ]\n"
+          "거래일시 2026-06-12 12:40\n품명 _ sz _ 금액\n공기밥 4 4,800\n합계 52,80뻔\n감사합니다")
+R1_MIN = "2026-06-12 12:00~13:30 과제 중간점검 회의(장소: 한식당 미가).\n참석: 김철수(한국전자통신연구원), 박민수(KAIST 교수)."
+
+
+def test_refine_takes_the_meeting_venue_when_the_receipt_prints_it():
+    text = R1_OCR + "\n" + R1_MIN
+    assert refine_with_text({"vendor_name": "대총김미가"}, text)["vendor_name"] == "한식당 미가"
+    assert refine_with_text({"vendor_name": "sz. 금액"}, text)["vendor_name"] == "한식당 미가"
+    assert refine_with_text({"vendor_name": None}, text)["vendor_name"] == "한식당 미가"
+    # 이미 같은 이름(띄어쓰기만 다름)이면 모델 값 그대로
+    assert refine_with_text({"vendor_name": "한식당미가"}, text)["vendor_name"] == "한식당미가"
+
+
+def test_refine_keeps_model_vendor_when_the_venue_is_not_on_the_receipt():
+    text = "카페 브루잉\n아메리카노 6 x 5,000\n합계 80,000원\n2026-06-15 과제 회의(장소: 본관 3층 회의실)."
+    assert refine_with_text({"vendor_name": "카페 브루잉"}, text)["vendor_name"] == "카페 브루잉"
+    # 장소 뒤 괄호 주소·「/ 내용」은 이름에 넣지 않는다(정답지 형식)
+    t2 = "[카드매출전표] 월향\n합계 64,000원\n회의록 / 장소: 월향 (중구 세종대로21길 40) / 내용: 안건 협의"
+    assert refine_with_text({"vendor_name": "월향 중구"}, t2)["vendor_name"] == "월향"
+
+
+# 10-01 실측 OCR(Gemini 사진 R7 1200px) — 거래일시 「2026」이 「20226」으로 읽혀 모델이 2022-06-16을 냈다
+R7_OCR = "중화요리홍보각\n[ 카드영수증 ]\n거래일시 20226-06-16 12:30\n짜장면 3 _ 24,000\n합계 70,000 원"
+R7_MIN = "2026-06-16 12:00~13:30 과제 협력 방향 논의 회의(장소: 중화요리 홍보각).\n참석: 김철수(한국전자통신연구원)."
+
+
+def test_refine_fixes_a_misread_year_from_the_one_matching_date_in_the_text():
+    text = R7_OCR + "\n" + R7_MIN
+    assert refine_with_text({"date": "2022-06-16"}, text)["date"] == "2026-06-16"
+    # 모델 날짜가 원문에 그대로 있으면 손대지 않는다
+    assert refine_with_text({"date": "2026-06-16"}, text)["date"] == "2026-06-16"
+
+
+def test_refine_keeps_the_model_date_when_the_text_does_not_settle_it():
+    # 월·일이 같은 원문 날짜가 없으면 그대로
+    assert refine_with_text({"date": "2022-06-16"}, "합계 70,000 원\n2026-07-02 회의")["date"] == "2022-06-16"
+    # 월·일이 같은 날짜가 둘 이상(연도가 서로 다름)이면 고르지 않는다
+    t = "합계 70,000 원\n2025-06-16 회의\n2026-06-16 회의"
+    assert refine_with_text({"date": "2022-06-16"}, t)["date"] == "2022-06-16"
+
+
 def test_institution_setting_decides_external_even_for_single_attendee():
     extracted = {"category": "회의비", "amount_total": 50000, "date": "2026-06-12",
                  "attendees": [{"name": "박민수", "affiliation": "KAIST 교수", "external": None}]}
@@ -212,7 +255,7 @@ def test_refine_completes_a_vendor_name_cut_mid_word():
     assert refine_with_text({"vendor_name": "한식당 미"}, text)["vendor_name"] == "한식당 미가"
     assert refine_with_text({"vendor_name": "카페"}, "카페 브루잉 합계 80,000원")["vendor_name"] == "카페"   # 온전한 낱말이면 그대로
     assert refine_with_text({"vendor_name": "월향"}, "합계 60,000원")["vendor_name"] == "월향"               # 원문에 없으면 그대로
-    assert refine_with_text({"vendor_name": None}, text)["vendor_name"] is None
+    assert refine_with_text({"vendor_name": None}, "한식당미가\n합계 24,000 원")["vendor_name"] is None  # 늘리기는 이름을 지어내지 않는다(장소 일치 규칙은 따로)
 
 
 def test_refine_marks_meals_provided_from_text():

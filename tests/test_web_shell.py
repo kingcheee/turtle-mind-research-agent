@@ -72,6 +72,18 @@ def test_admin_switch_defaults_on(tmp_path):
     assert "임시 승인" in r.text
 
 
+def test_demo_switch_off_hides_demo_table_but_keeps_upload(tmp_path):
+    # 10-01 발표 영상: 실제 사용자가 사진을 올리는 화면으로 찍는다 — 시연 케이스 표만 숨기고 올리기 폼·썸네일 칸은 남는다.
+    c = make_client(tmp_path, project={"시연 케이스": False})
+    t = c.get("/new").text
+    assert 'id="demo"' not in t and "예시 영수증/회의록" not in t
+    assert 'id="files"' in t and 'id="file-ph"' in t and 'id="text_doc"' in t
+
+
+def test_demo_switch_defaults_on(tmp_path):
+    assert 'id="demo"' in make_client(tmp_path).get("/new").text
+
+
 def test_sidebar_has_no_project_block(tmp_path):
     # 09-28 사용자 요청: 왼쪽의 과제(번호·과제명·기관·책임·참여) 블록은 정신없어서 뺀다 — 적용 기준만 남긴다.
     c = make_client(tmp_path, project={"연구개발과제번호": "2026-DEMO-001", "연구개발과제명": "판정관 시연 과제",

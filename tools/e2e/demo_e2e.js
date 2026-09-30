@@ -16,7 +16,7 @@ const S = process.argv[2] || '.';
   const expect = (name, ok, got) => { if (!ok) fails.push(`${name}: ${JSON.stringify(got)}`); };
 
   async function extract(n) {
-    await page.goto(B + '/new');
+    await page.goto(B + '/new?demo=all');
     await page.click(`#demo tbody tr:nth-child(${n})`);
     await page.click('#extract-btn');
     await page.waitForSelector('#judge-form', { timeout: 180000 });

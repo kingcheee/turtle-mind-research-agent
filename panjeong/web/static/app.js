@@ -216,9 +216,18 @@ const New = {
         else if (e.key === 'ArrowUp' || e.key === 'k') { e.preventDefault(); (tr.previousElementSibling || tr).focus(); }
       });
     }
+    const fbox = $('#file-ph', form);
     if (files) files.addEventListener('change', () => {
       const names = Array.from(files.files).map(f => f.name);
       $('#file-n', form).textContent = names.length ? `파일 ${names.length}개 · ${names.join(', ')}` : '선택한 파일 없음';
+      // 올린 사진 미리보기 — 시연 사진(#demo-ph)과 같은 모양으로 썸네일만(서버 왕복 없음)
+      if (fbox) {
+        fbox.querySelectorAll('img').forEach(i => URL.revokeObjectURL(i.src));
+        fbox.replaceChildren(...Array.from(files.files).filter(f => f.type.startsWith('image/')).map(f => {
+          const i = document.createElement('img'); i.alt = f.name; i.src = URL.createObjectURL(f); return i;
+        }));
+        fbox.hidden = !fbox.children.length;
+      }
       sum();
     });
     if (ta) ta.addEventListener('input', sum);
