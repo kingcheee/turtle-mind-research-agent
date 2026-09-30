@@ -2,22 +2,40 @@
 
 집행 순간에 영수증·회의록·출장 문서를 「국가연구개발사업 연구개발비 사용 기준」(과기정통부 고시) 조문으로 **가능·보완·불가** 판정하는 온디바이스 연구행정 에이전트. 판정은 결정론 규칙엔진이 내리고, AI(소형 언어모델)는 문서에서 필드를 뽑는 한 자리에만 쓰인다. 보완 건은 임시 승인으로 심판 큐에 가고, 행정팀의 인정이 예외 사전에 쌓인다. 결과는 공식 서식 hwpx(사용실적보고서·자체 회계감사 의견서·정산 이의신청서)에 채워진다.
 
-설계·결정 기록: `../02-MVP-설계.md` · 만다라트: `../01-만다라트.md`
+2026 NAIS AI 해커톤 본선 출품작(팀 거북이정신). 모델·OCR·판정이 모두 실행한 컴퓨터 안에서 돈다 — 증빙이 밖으로 나가지 않는다.
 
-## 실행 (노트북·Linux)
+## Docker로 실행 (다른 컴퓨터에서 바로)
+
+Docker(Compose 포함)만 있으면 된다. Python·Tesseract·llama.cpp·모델을 따로 깔지 않는다.
 
 ```bash
-# 준비: tesseract(kor), llama-server(llama.cpp), ~/models/qwen2.5-1.5b-instruct-q4_k_m.gguf, Python 3.12
-uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r <(sed -n '/dependencies/,/]/p' pyproject.toml | tr -d '[]",' | tail -n +2)   # 또는 deploy/linux/setup.sh
-./run.sh                 # llama-server(8097) + 웹(8080). WEB_PORT·LLAMA_PORT·MODEL·THREADS 환경변수
-LLAMA_PORT=18097 WEB_PORT=18080 THREADS=8 ./run.sh   # 이 노트북: 8097은 nabi-llama(MiniCPM), 8080은 다른 서버가 쓰는 중
-.venv/bin/python -m tools.seed_demo                  # (선택) 정답지 60건을 모델 없이 판정해 목록을 채움 — 시연 리허설은 빈 DB로
+git clone https://github.com/kingcheee/turtle-mind-research-agent.git
+cd turtle-mind-research-agent
+docker compose up -d --build
+```
+
+브라우저에서 http://localhost:8080. 같은 망의 다른 PC에서는 `http://<이 컴퓨터 주소>:8080` — 기관 안 한 대에 띄워 두고 연구자는 브라우저로만 쓰는 구성이다.
+
+- 컨테이너는 둘이다. `web`(이 저장소: 웹·규칙엔진·Tesseract OCR)과 `llm`(llama.cpp 공식 서버 이미지 `ghcr.io/ggml-org/llama.cpp:server`). 밖으로 여는 포트는 `web`의 8080 하나다.
+- **첫 실행 때만** `llm`이 모델(Qwen2.5-1.5B-Instruct GGUF Q4_K_M, 약 1.1GB)을 Hugging Face에서 받아 `models` 볼륨에 둔다. 받는 동안 화면은 이미 열리고 아래 상태바가 「모델 꺼짐」이다가, 다 받으면 「온디바이스 모델 연결됨」으로 바뀐다(새로 고침). 진행률은 로그에 안 찍힌다 — `docker compose exec llm du -sh /root/.cache`로 본다.
+- 포트 바꾸기 `WEB_PORT=9000 docker compose up -d` · 끄기 `docker compose down`(DB·업로드·모델 볼륨은 남는다) · 전부 비우기 `docker compose down -v`
+- 목록을 미리 채우려면 `docker compose exec web python -m tools.seed_demo`(정답지 60건을 모델 없이 판정)
+
+확인 범위(2026-10-01, x86-64 Linux · Docker 29.7 · Compose 5.5): 이미지 빌드(약 1분 20초), 두 컨테이너 기동, 화면 응답, 모델 자동 내려받기(약 8분) 뒤 연결 표시, 시드 60건, 보고서 hwpx 3종 생성, `web`→`llm` 텍스트 추출 1건(12초 · 생성 23 tok/s)까지. 메모리는 `llm` 약 1.7GB · `web` 약 0.1GB. 브라우저로 하는 시연 흐름 전체와 사진 OCR, arm64(Apple Silicon 등 — 두 기반 이미지는 arm64를 제공한다)·Windows·macOS의 Docker Desktop은 아직 돌려 보지 않았다.
+
+## 직접 실행 (Docker 없이, Linux)
+
+```bash
+# 준비: tesseract(kor), llama-server(llama.cpp), ~/models/qwen2.5-1.5b-instruct-q4_k_m.gguf, Python 3.12 — Ubuntu는 deploy/linux/setup.sh
+uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r <(sed -n '/dependencies/,/]/p' pyproject.toml | tr -d '[]",' | tail -n +2)
+./run.sh                 # llama-server(8097) + 웹(8080). WEB_PORT·LLAMA_PORT·MODEL·THREADS·FORMS_DIR 환경변수
+.venv/bin/python -m tools.seed_demo                  # (선택) 정답지 60건을 모델 없이 판정해 목록을 채움
 .venv/bin/python -m tools.seed_mock                  # (선택) UI 검토용 16건 — 영수증 사진 10장(Gemini 합성 5장 data/photos/ + 렌더 PNG 5장)·심판 대기/기한 초과/인정/불인정·예외 사전·재판정 이력까지 모델 없이
 ```
 
-브라우저에서 http://localhost:8080 (위 둘째 줄이면 18080). 시연 전 DB 초기화: 서버를 끄고 `rm data/panjeong.db` 후 다시 띄운다.
+브라우저에서 http://localhost:8080. DB 초기화: 서버를 끄고 `rm data/panjeong.db` 후 다시 띄운다.
 
-화면(2026-09-27 개편, 시안 02 「고밀도 작업대」 — 규격 정본은 `design.md`): 위 막대(과제·검색 ⌘K) · 왼쪽 사이드바(건 목록·새 증빙·행정팀·보고서·실측 + 과제·적용 기준) · 본문 · 아래 상태바(모델 연결·실측). URL이 곧 화면이다.
+화면(규격 정본은 `design.md`): 위 막대(과제·검색 ⌘K) · 왼쪽 사이드바(건 목록·새 증빙·행정팀·보고서·실측 + 과제·적용 기준) · 본문 · 아래 상태바(모델 연결·실측). URL이 곧 화면이다.
 
 | 화면 | 주소 | 내용 |
 |---|---|---|
@@ -31,8 +49,6 @@ LLAMA_PORT=18097 WEB_PORT=18080 THREADS=8 ./run.sh   # 이 노트북: 8097은 na
 
 색·폭은 `panjeong/web/static/app.css` 머리의 `:root` 토큰 한 블록에서만 바꾼다. 화면 동작(필터·미리보기·원문 대조·분할선·키보드)은 `static/app.js` 하나. 폰트는 IBM Plex Sans KR·Plex Mono 로컬(woff2), CDN 0.
 행정팀(선집행·사후심판) 축을 시연에서 빼려면 `data/project.json`에 `"행정팀": false`를 넣는다 — 사이드바 항목·「임시 승인」·「이의 신청」 버튼이 숨고(라우트·테스트는 그대로), 시연 순서 3번은 건너뛴다. 기본은 켜짐.
-
-N100(Windows): `deploy/n100/setup.ps1` → `run.ps1` (포트 18097/18080, 나비 서비스와 분리). Linux VM: `deploy/linux/setup.sh`.
 
 ## 구조
 
@@ -48,7 +64,9 @@ tools/                       seed_demo.py(시연 시드, 선택) · ocr_smoke.py
 panjeong/reports/fill.py     공식 서식 hwpx 좌표 채움(hwp-agent 도구 벤더링) + 별첨 HTML
 bench/                       실측(문서당 초·tok/s·필드 정확도) · Colab 노트북
 data/                        project.json(과제·기관명·참여연구자) · 업로드 · DB · 생성 보고서 · gen.py(합성 정답지 생성기) · answer_key.json(60건) · images/(영수증 PNG 20장, render_receipts.js) · photos/(Gemini 합성 영수증 사진 5장 + cases.json — 시연 1·2·3·4·6번과 목데이터 5건) · seeds/(공개 집행내역 발췌)
-tests/                       pytest 149 (규칙·구간·요건 대조·추출·저장소·웹 화면·웹 셸·서식·벤치·정답지 생성기·시드)
+tests/                       pytest 149 (규칙·구간·요건 대조·추출·저장소·웹 화면·웹 셸·서식·벤치·정답지 생성기·시드) — 서식 4건은 저장소 옆 `../서식` 폴더를 찾으므로 새로 clone한 곳에서는 건너뛴다(145 통과·4 건너뜀)
+forms/                       공식 서식 hwpx 3종(국가법령정보센터) — Docker와 run.sh가 FORMS_DIR로 가리킨다
+Dockerfile · compose.yaml    web 이미지 + llm(llama.cpp 서버) 구성
 ```
 
 ## 시연 순서 (5분)
@@ -64,19 +82,19 @@ tests/                       pytest 149 (규칙·구간·요건 대조·추출·
 ```bash
 .venv/bin/python -m pytest -q          # 단위·통합 (정답지 생성기 검산 포함)
 .venv/bin/python -m data.gen           # 정답지 재생성 (결정적, seed 7) → data/answer_key.json
-NODE_PATH=~/workspace/03-agents/naver-agent/node_modules node data/render_receipts.js   # 영수증 PNG 20장
+node data/render_receipts.js           # 영수증 PNG 20장 (Playwright가 깔린 Node 환경)
 .venv/bin/python tools/ocr_smoke.py    # OCR 경로 스모크 (Tesseract kor)
 .venv/bin/python bench/run_bench.py --host 노트북 --n 20   # 추출 실측 (llama-server 필요) → bench/results/ → /bench
-# 브라우저 E2E — 빈 DB의 서버(PJ_URL, 기본 http://127.0.0.1:18080)와 실제 모델로. 끝나면 예외 사전이 남으니 DB 초기화
-export NODE_PATH=~/workspace/03-agents/naver-agent/node_modules
-node tools/e2e/demo_e2e.js ../화면/e2e-0927     # 시연 1~5 전부 + 기대 판정 단언 → 「E2E PASS」
-node tools/e2e/shots_new.js ../화면/new-0927 4  # 화면 한 바퀴 캡처 + 페이지 스크롤·가로 넘침·콘솔 에러·외부 요청 0 검사
-node tools/e2e/video_cuts.js ../화면/발표-0929     # 발표 영상 40초(03-발표-대본.md §3) 컷별 화면 1920×1080 — 빈 DB에서
+# 브라우저 E2E(Playwright) — 빈 DB의 서버(PJ_URL, 기본 http://127.0.0.1:18080)와 실제 모델로. 끝나면 예외 사전이 남으니 DB 초기화
+node tools/e2e/demo_e2e.js out/e2e     # 시연 1~5 전부 + 기대 판정 단언 → 「E2E PASS」
+node tools/e2e/shots_new.js out/shots 4  # 화면 한 바퀴 캡처 + 페이지 스크롤·가로 넘침·콘솔 에러·외부 요청 0 검사
+node tools/e2e/video_cuts.js out/cuts    # 발표 영상 컷별 화면 1920×1080 — 빈 DB에서
 ```
 
 ## 고지
 
 - 모델 Qwen2.5-1.5B-Instruct(Alibaba, Apache-2.0) GGUF Q4_K_M · 추론 llama.cpp(MIT) · OCR Tesseract(Apache-2.0) · hwpx 처리 python-hwpx + hwp-agent `hwpx_fill.py`(자체) · 웹 FastAPI·HTMX
 - 법령 원문: 국가법령정보센터(「국가연구개발사업 연구개발비 사용 기준」 제2026-38호, 「국가연구개발혁신법 시행규칙」 별지 제7호서식 등). 고시에 없는 규칙(주류·1인 한도·주말)은 「기관 지침」 출처로 낮춰 보완까지만 판정
-- 데이터: 합성(생성형 AI로 제작, 실제 개인정보·연구비 데이터 없음). 이 코드의 초안 작성에 Claude(Anthropic)를 활용
+- 데이터: 합성(생성형 AI로 제작, 실제 개인정보·연구비 데이터 없음). 시연 과제·회의록·영수증에 나오는 기관명과 인명은 예시로 쓴 것이며 해당 기관·인물과 무관하다. 이 코드의 초안 작성에 Claude(Anthropic)를 활용
+- 공식 서식(`forms/`): 국가법령정보센터(law.go.kr)에서 받은 「국가연구개발혁신법 시행규칙」 별지 제7호서식(hwp를 hwpx로 변환), 「국가연구개발사업 연구개발비 사용 기준」(제2026-38호) 별지 제5호·제7호
 - 판정 결과는 참고용이며 최종 판단은 기관 규정 담당자에게 있다

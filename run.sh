@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 노트북·Linux VM용 실행: llama-server(CPU) + 웹. 포트는 나비(8097/8098)와 겹치지 않게 환경변수로 바꿀 수 있다.
+# 노트북·Linux VM용 실행: llama-server(CPU) + 웹. 포트는 환경변수로 바꿀 수 있다. Docker로 띄울 때는 compose.yaml.
 set -e
 cd "$(dirname "$0")"
 MODEL="${MODEL:-$HOME/models/qwen2.5-1.5b-instruct-q4_k_m.gguf}"
@@ -9,4 +9,5 @@ if ! curl -s "localhost:$LLAMA_PORT/health" | grep -q '"ok"'; then
   for i in $(seq 1 90); do curl -s "localhost:$LLAMA_PORT/health" | grep -q '"ok"' && break; sleep 1; done
 fi
 export LLAMA_URL="http://127.0.0.1:$LLAMA_PORT"
+export FORMS_DIR="${FORMS_DIR:-$PWD/forms}"   # 공식 서식 hwpx — 보고서 내려받기가 읽는다
 exec .venv/bin/python -m uvicorn run:app --host 0.0.0.0 --port "$WEB_PORT"
